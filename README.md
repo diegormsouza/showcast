@@ -16,3 +16,6 @@ The image below shows SHOWCast being used by MARN:
 ![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/238e7dcc-6bc1-4ff8-9104-bc76101e8beb)
 
 To check the files being processed by SHOWCast, please access the following GNC-A ingestion folder, kindly provided by SSEC/CIMMS: http://geonetcast.ssec.wisc.edu/geonetcast/
+
+![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/bd9ba737-ceda-4d58-a8a1-cfd672e78a2f)
+
