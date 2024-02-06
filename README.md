@@ -4,7 +4,7 @@
 
 Please download SHOWCast **v.2.5.1** at the following link: [Link](https://www.dropbox.com/s/oe4kbndzh9lplqw/SHOWCast_v_2_5_1.zip?raw=1)
 
-Given the number of files and file sizes of the full package, only the main scripts will be kept in this GitHub repository. 
+**Note:** Given the number of files and file sizes of the full package, only the main scripts will be kept in this GitHub repository. 
 
 Please download the installation manual at the following link: [Link](https://www.dropbox.com/s/nnd6e8657np7gpu/SHOWCast%20Manual%20-%20v2021-10-26.pdf?raw=1)
 
