@@ -1,0 +1,251 @@
+#######################################################################################################
+# LICENSE
+# Copyright (C) 2019 - INPE - NATIONAL INSTITUTE FOR SPACE RESEARCH - BRAZIL
+# This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+# General Public License as published by the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+# Public License for more details.
+# You should have received a copy of the GNU General Public License along with this program.
+# If not, see http://www.gnu.org/licenses/.
+# Modified for the needs of HNMS by RMC/LARISSA
+# Using MET Satellites
+# Last Update: August 2020
+#######################################################################################################
+#------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
+# Required modules
+#--------------------------------
+#to run in a pure text terminal:
+import matplotlib
+matplotlib.use('Agg')
+#--------------------------------
+from PIL import Image
+import re                                                    # Regular expression operations
+import numpy as np                                           # Scientific computing with Python
+import os                                                    # Miscellaneous operating system interfaces
+import glob                                                  # Unix style pathname pattern expansion
+import matplotlib.colors                                     # Matplotlib colors
+import cartopy, cartopy.crs as ccrs                          # Plot maps
+import cartopy.io.shapereader as shpreader                   # Import shapefiles
+import matplotlib.pyplot as plt                              # Plotting library
+import sys                                                   # Import the "system specific parameters and functions" module
+import time as t                                             # Time access and conversion
+from datetime import datetime, timedelta                     # Library to convert julian day to dd-mm-yyyy
+from netCDF4 import Dataset                                  # Read / Write NetCDF4 files
+from osgeo import gdal, osr, ogr                             # Import GDAL
+from shutil import move                                      # High-level file operations
+from matplotlib.image import imread                          # Read an image from a file into an array
+from cartopy.feature.nightshade import Nightshade            # Draws a polygon where there is no sunlight for the given datetime.
+#from html_update import update                               # Update the HTML animation
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes # Add a child inset axes to this existing axes.
+# Ignore possible warnings
+import warnings
+warnings.filterwarnings("ignore")
+#------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
+# Start the time counter
+print('MSG SST GRE Script started.')
+start_time = t.time()
+
+###############################################################################
+# Reading the Data
+###############################################################################
+
+# Path to the downloaded image file
+path = sys.argv[1]
+
+# Open the file using the NetCDF4 library
+nc = Dataset(path)
+
+# Define the extent
+extent = [float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])]
+min_lon = extent[0]; max_lon = extent[2]; min_lat = extent[1]; max_lat = extent[3]
+
+# Define KM_PER_DEGREE
+KM_PER_DEGREE = 111.32
+
+# Calculate the total number of degrees in lat and lon
+deg_lon = extent[2] - extent[0]
+deg_lat = extent[3] - extent[1]
+
+# Calculate the number of pixels
+resolution = int(sys.argv[6])
+sizex = ((KM_PER_DEGREE * deg_lon) /  resolution)*5
+sizey = ((KM_PER_DEGREE * deg_lat) /  resolution)*5
+
+satellite = 'MTP'
+# product = 'SSTSKG'
+# storage =  product + '_STG' # to store data before mosaicing
+#
+# # Create the satellite output directory if it doesn't exist
+# out_dir = '/db/Output/' + satellite
+# if not os.path.exists(out_dir):
+#     os.mkdir(out_dir)
+#     os.chmod(out_dir, 0o775)
+#
+# # Create the product output directory if it doesn't exist
+# out_dir = '/db/Output/' + satellite + '//' + storage + '//'
+# if not os.path.exists(out_dir):
+#     os.mkdir(out_dir)
+#     os.chmod(out_dir, 0o775)
+
+# Reading lats and lons
+lats = nc.variables['lat'][:]
+lons = nc.variables['lon'][:]
+
+# latitude lower and upper index
+latli = np.argmin( np.abs( lats - extent[1] ) )
+latui = np.argmin( np.abs( lats - extent[3] ) )
+
+# longitude lower and upper index
+lonli = np.argmin( np.abs( lons - extent[0] ) )
+lonui = np.argmin( np.abs( lons - extent[2] ) )
+
+# Extract the Sea Surface Temperature
+data = nc.variables['sea_surface_temperature'][ : , latli:latui , lonli:lonui ]
+# Return a reshaped matrix
+data = data.squeeze()
+# Flip the y axis
+data = np.flipud(data)
+# Convert to Celsius
+data = data - 273.15
+
+# Search for the date in the file name
+date = (path[path.find("FIELD-")+6:path.find("Z.nc")])
+date_file = date
+date_formated = date[0:4] + "-" + date[4:6] + "-" + date[6:8] + " " + date [8:10] + ":" + date [10:12] + " UTC"
+
+
+# Colormap
+cmap = 'jet'
+#vmin = -5.0
+vmin = 4.0
+#vmax = 35.0
+vmax = 28.5
+thick_interval = 1
+prod_title = 'Sea Surface Temperature (0.05°)'
+product = 'SST'
+
+# Plot configuration
+plot_config = {
+"resolution": resolution,
+"dpi": 150,
+"states_color": 'white', "states_width": sizey * 0.00006,
+"countries_color": 'gold', "countries_width": sizey * 0.00012,
+"continents_color": 'gold', "continents_width": sizey * 0.00025,
+"grid_color": 'white', "grid_width": sizey * 0.00025, "grid_interval": 10.0,
+"vmin": vmin, "vmax": vmax, "cmap": cmap,
+"title_text": "MSG " + prod_title + " ", "title_size": int(sizex * 0.004), "title_x_offset": int(sizex * 0.05), "title_y_offset": sizey - int(sizey * 0.025),
+"thick_interval": thick_interval, "cbar_labelsize": int(sizey * 0.008), "cbar_labelpad": -int(sizey * 0.0),
+"file_name_id_1": "MTP",  "file_name_id_2": product + "_GR"
+}
+
+# Choose the plot size (width x height, in inches)
+fig = plt.figure(figsize=(sizex/float(plot_config["dpi"]), sizey/float(plot_config["dpi"])), dpi=plot_config["dpi"])
+# Define the projection
+proj = ccrs.PlateCarree()
+# Use the PlateCarree projection in cartopy
+ax = plt.axes([0, 0, 1, 1], projection=proj)
+img_extent = [extent[0], extent[2], extent[1], extent[3]]
+#img_extent = [-60, 60, -60, 60]
+#img_extent = [18, 34, 32, 42]
+
+# Add a background image
+#ax.stock_img()
+#fname = os.path.join('..//Maps//', 'land_ocean_ice_8192.jpg')
+##ax.imshow(imread(fname), origin='upper', transform=ccrs.PlateCarree(), extent=[-180, 180, -90, 90], zorder=1)
+#ax.imshow(imread(fname), origin='upper', transform=ccrs.PlateCarree(), extent=[18, 34, 32, 42], zorder=1)
+#date = datetime(int(year), int(month), int(day), int(hour))
+#ax.add_feature(Nightshade(date, alpha=0.7), zorder=2)
+# Plot the image
+img = ax.imshow(data, vmin=plot_config["vmin"], vmax=plot_config["vmax"], origin='upper', extent=img_extent, cmap=plot_config["cmap"], zorder=3)
+
+# To put colorbar inside picture
+axins1 = inset_axes(ax, width="100%", height="1%", loc='lower center', borderpad=0.0)
+
+# Add states and provinces
+#shapefile = list(shpreader.Reader('..//Shapefiles//ne_10m_admin_1_states_provinces.shp').geometries())
+#ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["states_color"],facecolor='none', linewidth=plot_config["states_width"], zorder=4)
+
+# Add countries
+shapefile = list(shpreader.Reader('..//Shapefiles//ne_50m_admin_0_countries.shp').geometries())
+ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["countries_color"],facecolor='black', linewidth=plot_config["countries_width"], zorder=5)
+
+# Add continents
+shapefile = list(shpreader.Reader('..//Shapefiles//ne_10m_coastline.shp').geometries())
+ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["continents_color"],facecolor='black', linewidth=plot_config["continents_width"], zorder=6)
+
+# Add coastlines, borders and gridlines
+ax.gridlines(color=plot_config["grid_color"], alpha=0.5, linestyle='--', linewidth=plot_config["grid_width"], xlocs=np.arange(-180, 180, plot_config["grid_interval"]), ylocs=np.arange(-180, 180, plot_config["grid_interval"]), draw_labels=False, zorder=7)
+
+# Remove the outline border
+ax.outline_patch.set_visible(False)
+
+# Add a title
+plt.annotate(plot_config["title_text"] + " " + date_formated , xy=(plot_config["title_x_offset"], plot_config["title_y_offset"]), xycoords='figure pixels', fontsize=plot_config["title_size"], fontweight='bold', color='white', bbox=dict(boxstyle="round",fc=(0.0, 0.0, 0.0), ec=(1., 1., 1.)), zorder=8)
+
+#------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
+
+# Add logos / images to the plot
+my_logo = plt.imread('..//Logos//my_logo.png')
+newax = fig.add_axes([0.02, 0.03, 0.05, 0.05], anchor='SW', zorder=12) #  [left, bottom, width, height]. All quantities are in fractions of figure width and height.
+newax.imshow(my_logo)
+newax.axis('off')
+
+# Add a colorbar
+ticks = np.arange(plot_config["vmin"], plot_config["vmax"], plot_config["thick_interval"]).tolist()
+ticks = plot_config["thick_interval"] * np.round(np.true_divide(ticks,plot_config["thick_interval"]))
+ticks = ticks[1:]
+cb = fig.colorbar(img, cax=axins1, orientation="horizontal", ticks=ticks)
+cb.outline.set_visible(False)
+cb.ax.tick_params(width = 0)
+cb.ax.xaxis.set_tick_params(pad=plot_config["cbar_labelpad"])
+cb.ax.xaxis.set_ticks_position('top')
+cb.ax.tick_params(axis='x', colors='cyan', labelsize=plot_config["cbar_labelsize"])
+
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+product = product + "_GR"
+
+# Create the satellite output directory if it doesn't exist
+out_dir = '/db/Output/' + satellite
+if not os.path.exists(out_dir):
+    os.mkdir(out_dir)
+    os.chmod(out_dir, 0o775)
+
+# Create the product output directory if it doesn't exist
+out_dir = '/db/Output/' + satellite + '//' + product + '//'
+if not os.path.exists(out_dir):
+    os.mkdir(out_dir)
+    os.chmod(out_dir, 0o775)
+
+# Save the image
+plt.savefig(out_dir + plot_config["file_name_id_1"] + "_" + plot_config["file_name_id_2"] + "_" + date_file + '.png', bbox_inches='tight', pad_inches=0, facecolor='black')
+
+# Update the animation
+#update(satellite, product)
+
+#create the thumbnail
+thumb_dir = '/db/Output/Thumbnails/MTP/' + satellite + "_" + product + '_' + 'thumbnail.png'
+im = Image.open(out_dir + plot_config["file_name_id_1"] + "_" + plot_config["file_name_id_2"] + "_" + date_file + '.png')
+#size = (1024,1024)
+size = (512,512)
+im.thumbnail(size)
+im.save(thumb_dir)
+
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+# Put the processed file on the log
+import datetime # Basic Date and Time types
+with open('..//Logs//shc_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+    log.write(str(datetime.datetime.now()))
+    log.write('\n')
+    log.write(path + '\n')
+    log.write('\n')
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+print('Total processing time:', round((t.time() - start_time),2), 'seconds.')

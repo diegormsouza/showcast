@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+
+<title></title>
+<meta charset="utf-8">
+<meta http-equiv="Cache-control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</meta>
+
+<link href="../Libraries/theme.css" rel="stylesheet">
+<script src="../Libraries/jquery/jQuery-3.4.1.js"></script>
+<script src="../Libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="../Libraries/Util.js"></script>
+<script src="../Libraries/GridGallery.js"></script>
+<script src="../Libraries/Carousel.js"></script>
+<script defer src="../JS/Player_wmo.js"></script>
+
+<script src="../Libraries/wheelzoom-master/wheelzoom_upd.js"></script>
+
+</head>
+
+  <body>
+
+   <main>
+      <div class="container-fluid p-0 d-flex h-100 flex-column text-white">
+          <div class="row h-100">
+            <div class="col-lg-2 col-md-2 align-self-center h-100 p-2 side-panel-parent">
+                <div id="side-panel">
+                    <div class="card text-center" id="view-panel">
+                        <div class="card-header">
+                            <a href="SHOWCast.html"><i id="homeButton" class="rounded fa fa-home" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="btn-group" role='group'>
+                                <button id="show-carousel-button" type="button" class="btn btn-secondary">Slide</button>
+                                <button id="show-grid-button" type="button"  class="btn btn-secondary active">Grid</button>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card text-center" id="control-panel">
+                        <div class="card-header">
+                            Control
+                        </div>
+                        <div class="card-body">
+                            <div class="btn-group" role='group'>
+                                <button id="fullscreen-button" type="button" class="btn btn-secondary mr-2"><i class="fas fa-expand-arrows-alt"></i></button>                                    
+                                <button id="carousel-prev-button" type="button" class="btn btn-secondary"><i class="fa fa-chevron-left"></i></button>
+                                <button id="carousel-play-button" type="button" class="btn btn-secondary"><i class="fa fa-play"></i></button>
+                                <button id="carousel-next-button" type="button" class="btn btn-secondary"><i class="fa fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr>
+
+                    <hr>
+                    <div class="card text-center" id="logos-panel">
+                        <div class="card-header">
+                            Supported by:
+                        </div>
+                        <div class="card-body">
+                            <img src="../Logos/pmk_logo.png">
+                            <img src="../Logos/eumetcast-logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10 justify-content-center h-100 text-center flex-column">
+                <div id="meteo-carousel" class='h-100'></div>
+                <div id="meteo-grid" class='h-100'></div>
+                <p id="error" class="products-error">No images for this category</p>
+            </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+  </body>
+  </html>

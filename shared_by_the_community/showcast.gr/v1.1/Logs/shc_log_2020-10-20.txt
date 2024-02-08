@@ -1,0 +1,957 @@
+2020-10-20 00:00:26.852092
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010191320-__
+
+2020-10-20 00:00:26.921874
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010191300-__
+
+2020-10-20 00:00:26.925181
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010191300-__
+
+2020-10-20 00:00:27.696908
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010191100Z.nc
+
+2020-10-20 03:46:17.356514
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200330-__
+
+2020-10-20 03:47:16.266094
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200340-__
+
+2020-10-20 03:51:16.290967
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200345-__
+
+2020-10-20 03:56:16.302343
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200350-__
+
+2020-10-20 03:59:17.093597
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200345-__
+
+2020-10-20 03:59:17.315740
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200345-__
+
+2020-10-20 04:01:16.764149
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200355-__
+
+2020-10-20 04:06:16.396101
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200400-__
+
+2020-10-20 04:11:17.462494
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200405-__
+
+2020-10-20 04:14:16.453444
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200400-__
+
+2020-10-20 04:14:16.458361
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200400-__
+
+2020-10-20 04:16:16.524916
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200410-__
+
+2020-10-20 04:21:16.483821
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200415-__
+
+2020-10-20 04:26:17.023080
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200420-__
+
+2020-10-20 04:29:16.750241
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200415-__
+
+2020-10-20 04:29:16.754651
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200415-__
+
+2020-10-20 04:32:16.660202
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200425-__
+
+2020-10-20 04:36:16.861909
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200430-__
+
+2020-10-20 04:36:18.046185
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200200Z.nc
+
+2020-10-20 04:41:16.671592
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200435-__
+
+2020-10-20 04:44:16.753735
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200430-__
+
+2020-10-20 04:44:16.766283
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200430-__
+
+2020-10-20 04:46:16.719343
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200440-__
+
+2020-10-20 04:51:16.657718
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200445-__
+
+2020-10-20 04:56:16.740497
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200450-__
+
+2020-10-20 04:59:16.709512
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200445-__
+
+2020-10-20 04:59:16.719494
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200445-__
+
+2020-10-20 05:01:16.772270
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200455-__
+
+2020-10-20 05:06:16.716618
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200500-__
+
+2020-10-20 05:36:17.845620
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200300Z.nc
+
+2020-10-20 06:11:16.489730
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200605-__
+
+2020-10-20 06:14:15.471907
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200600-__
+
+2020-10-20 06:14:15.471934
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200600-__
+
+2020-10-20 06:16:15.410889
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200610-__
+
+2020-10-20 06:21:15.444408
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200615-__
+
+2020-10-20 06:29:56.175051
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200615-__
+
+2020-10-20 06:29:56.176255
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200615-__
+
+2020-10-20 06:30:56.475034
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200625-__
+
+2020-10-20 06:35:56.183753
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200630-__
+
+2020-10-20 06:39:58.638575
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200400Z.nc
+
+2020-10-20 06:40:56.568572
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200635-__
+
+2020-10-20 06:43:56.399030
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200630-__
+
+2020-10-20 06:44:57.879773
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200630-__
+
+2020-10-20 06:45:56.661801
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200640-__
+
+2020-10-20 07:00:15.038052
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MTOP-GLBSST_FIELD-202010200000Z.nc
+
+2020-10-20 07:00:56.245146
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200655-__
+
+2020-10-20 07:05:56.248713
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200700-__
+
+2020-10-20 07:10:56.255591
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200705-__
+
+2020-10-20 07:13:56.420296
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200700-__
+
+2020-10-20 07:14:56.370853
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200700-__
+
+2020-10-20 07:15:56.709657
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200710-__
+
+2020-10-20 07:20:56.395282
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200715-__
+
+2020-10-20 07:25:56.593554
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200720-__
+
+2020-10-20 07:28:56.768326
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200715-__
+
+2020-10-20 07:29:57.348452
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200715-__
+
+2020-10-20 07:30:56.555149
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200725-__
+
+2020-10-20 07:35:56.596483
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200730-__
+
+2020-10-20 07:35:57.747237
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200500Z.nc
+
+2020-10-20 07:37:58.576762
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200600Z.nc
+
+2020-10-20 07:40:56.527022
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200735-__
+
+2020-10-20 07:43:57.073747
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200730-__
+
+2020-10-20 07:43:57.086008
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200730-__
+
+2020-10-20 07:45:56.569360
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200740-__
+
+2020-10-20 07:50:56.850346
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200745-__
+
+2020-10-20 08:05:56.691362
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200800-__
+
+2020-10-20 08:10:56.647357
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200805-__
+
+2020-10-20 08:14:56.682592
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200800-__
+
+2020-10-20 08:14:56.683242
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200800-__
+
+2020-10-20 08:15:56.797868
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200810-__
+
+2020-10-20 08:20:56.716211
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200815-__
+
+2020-10-20 08:25:56.895258
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200820-__
+
+2020-10-20 08:28:56.951080
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200815-__
+
+2020-10-20 08:29:57.427826
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200815-__
+
+2020-10-20 08:30:57.003766
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200825-__
+
+2020-10-20 08:35:57.054756
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200830-__
+
+2020-10-20 08:44:56.903631
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200830-__
+
+2020-10-20 08:44:56.903665
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200830-__
+
+2020-10-20 08:45:56.885411
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200840-__
+
+2020-10-20 08:47:58.170006
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200700Z.nc
+
+2020-10-20 08:50:57.356286
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200845-__
+
+2020-10-20 09:05:57.043358
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200900-__
+
+2020-10-20 09:10:56.947350
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200905-__
+
+2020-10-20 09:14:57.034323
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200900-__
+
+2020-10-20 09:14:57.035434
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200900-__
+
+2020-10-20 09:15:57.061424
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200910-__
+
+2020-10-20 09:20:57.492372
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200915-__
+
+2020-10-20 09:25:57.079833
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200920-__
+
+2020-10-20 09:28:57.433623
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010200915-__
+
+2020-10-20 09:29:57.370814
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010200915-__
+
+2020-10-20 09:30:57.759684
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200925-__
+
+2020-10-20 09:35:57.525911
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200930-__
+
+2020-10-20 09:44:58.185179
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200800Z.nc
+
+2020-10-20 10:03:25.473248
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010200950-__
+
+2020-10-20 10:06:24.378609
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201000-__
+
+2020-10-20 10:11:24.365846
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201005-__
+
+2020-10-20 10:14:24.858318
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201000-__
+
+2020-10-20 10:14:24.858347
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201000-__
+
+2020-10-20 10:16:24.417279
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201010-__
+
+2020-10-20 10:21:24.386299
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201015-__
+
+2020-10-20 10:26:24.419757
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201020-__
+
+2020-10-20 10:29:24.715183
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201015-__
+
+2020-10-20 10:29:24.740777
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201015-__
+
+2020-10-20 10:31:24.498671
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201025-__
+
+2020-10-20 10:36:24.813961
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201030-__
+
+2020-10-20 10:40:26.146418
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010200900Z.nc
+
+2020-10-20 10:41:24.531659
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201035-__
+
+2020-10-20 10:44:24.869773
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201030-__
+
+2020-10-20 10:44:24.873082
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201030-__
+
+2020-10-20 10:46:24.818516
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201040-__
+
+2020-10-20 10:51:24.785045
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201045-__
+
+2020-10-20 10:56:24.562878
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201050-__
+
+2020-10-20 10:59:24.940242
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201045-__
+
+2020-10-20 10:59:24.976607
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201045-__
+
+2020-10-20 11:01:24.615162
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201055-__
+
+2020-10-20 11:06:24.907649
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201100-__
+
+2020-10-20 11:56:10.059849
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201150-__
+
+2020-10-20 11:59:09.158088
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201145-__
+
+2020-10-20 11:59:09.322364
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201145-__
+
+2020-10-20 12:01:08.943059
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201155-__
+
+2020-10-20 12:06:08.951197
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201200-__
+
+2020-10-20 12:11:08.977733
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201205-__
+
+2020-10-20 12:14:08.973726
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201200-__
+
+2020-10-20 12:15:09.149738
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201200-__
+
+2020-10-20 12:16:09.007909
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201210-__
+
+2020-10-20 12:21:09.080603
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201215-__
+
+2020-10-20 12:26:09.390741
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201220-__
+
+2020-10-20 12:29:09.437687
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201215-__
+
+2020-10-20 12:29:09.485093
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201215-__
+
+2020-10-20 12:31:09.673524
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201225-__
+
+2020-10-20 12:34:10.591330
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201100Z.nc
+
+2020-10-20 12:36:09.186236
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201230-__
+
+2020-10-20 12:41:09.904259
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201235-__
+
+2020-10-20 13:06:09.342777
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201300-__
+
+2020-10-20 13:11:09.233381
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201305-__
+
+2020-10-20 13:14:09.246434
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201300-__
+
+2020-10-20 13:14:09.254117
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201300-__
+
+2020-10-20 13:16:09.370732
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201310-__
+
+2020-10-20 13:21:09.259321
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201315-__
+
+2020-10-20 13:26:09.805593
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201320-__
+
+2020-10-20 13:29:09.583800
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201315-__
+
+2020-10-20 13:29:09.589503
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201315-__
+
+2020-10-20 13:31:09.385101
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201325-__
+
+2020-10-20 13:35:11.092392
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201200Z.nc
+
+2020-10-20 13:36:09.381470
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201330-__
+
+2020-10-20 13:41:09.579521
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201335-__
+
+2020-10-20 13:44:09.800395
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201330-__
+
+2020-10-20 13:44:09.813809
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201330-__
+
+2020-10-20 13:46:09.588371
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201340-__
+
+2020-10-20 13:51:09.529846
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201345-__
+
+2020-10-20 13:56:09.977226
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201350-__
+
+2020-10-20 13:59:10.371812
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201345-__
+
+2020-10-20 13:59:10.380345
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201345-__
+
+2020-10-20 14:01:09.639178
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201355-__
+
+2020-10-20 14:35:10.640985
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201300Z.nc
+
+2020-10-20 14:36:09.633039
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201430-__
+
+2020-10-20 14:41:09.632077
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201435-__
+
+2020-10-20 14:44:09.709126
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201430-__
+
+2020-10-20 14:44:09.709125
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201430-__
+
+2020-10-20 14:46:09.730479
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201440-__
+
+2020-10-20 14:51:09.704636
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201445-__
+
+2020-10-20 14:56:10.433026
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201450-__
+
+2020-10-20 14:59:10.753857
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201445-__
+
+2020-10-20 14:59:10.807404
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201445-__
+
+2020-10-20 15:01:09.892500
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201455-__
+
+2020-10-20 15:06:09.936292
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201500-__
+
+2020-10-20 15:11:10.780605
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201505-__
+
+2020-10-20 15:14:10.062651
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201500-__
+
+2020-10-20 15:14:10.077376
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201500-__
+
+2020-10-20 15:16:10.493815
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201510-__
+
+2020-10-20 15:21:10.068429
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201515-__
+
+2020-10-20 15:26:10.092589
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201520-__
+
+2020-10-20 15:29:10.093223
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201515-__
+
+2020-10-20 15:29:10.112833
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201515-__
+
+2020-10-20 15:31:10.092163
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201525-__
+
+2020-10-20 15:35:12.573704
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201400Z.nc
+
+2020-10-20 15:36:10.093786
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201530-__
+
+2020-10-20 15:41:10.146688
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201535-__
+
+2020-10-20 15:44:10.194612
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201530-__
+
+2020-10-20 15:44:10.198671
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201530-__
+
+2020-10-20 15:46:10.368088
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201540-__
+
+2020-10-20 15:51:10.136682
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201545-__
+
+2020-10-20 15:56:10.268320
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201550-__
+
+2020-10-20 15:59:10.217867
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201545-__
+
+2020-10-20 15:59:10.219164
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201545-__
+
+2020-10-20 16:01:10.277316
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201555-__
+
+2020-10-20 16:06:10.172123
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201600-__
+
+2020-10-20 16:11:10.549280
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201605-__
+
+2020-10-20 16:14:10.244043
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201600-__
+
+2020-10-20 16:14:10.247351
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201600-__
+
+2020-10-20 16:16:10.372365
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201610-__
+
+2020-10-20 16:34:11.248152
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201500Z.nc
+
+2020-10-20 17:34:11.245292
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201600Z.nc
+
+2020-10-20 18:01:10.305432
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201755-__
+
+2020-10-20 18:06:10.311521
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201800-__
+
+2020-10-20 18:11:10.334919
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201805-__
+
+2020-10-20 18:14:10.657444
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201800-__
+
+2020-10-20 18:14:10.843576
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201800-__
+
+2020-10-20 18:16:10.399226
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201810-__
+
+2020-10-20 18:21:10.374882
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201815-__
+
+2020-10-20 18:26:10.760275
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201820-__
+
+2020-10-20 18:29:38.025354
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201815-__
+
+2020-10-20 18:30:38.047384
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201825-__
+
+2020-10-20 18:30:38.056729
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201815-__
+
+2020-10-20 18:34:23.949684
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201700Z.nc
+
+2020-10-20 18:36:28.517258
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201830-__
+
+2020-10-20 18:41:05.107362
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201835-__
+
+2020-10-20 18:44:21.430258
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201830-__
+
+2020-10-20 18:44:21.432249
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201830-__
+
+2020-10-20 18:46:21.687902
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201840-__
+
+2020-10-20 18:51:21.647243
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201845-__
+
+2020-10-20 18:56:21.441507
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201850-__
+
+2020-10-20 18:59:21.780738
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201845-__
+
+2020-10-20 18:59:21.850362
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201845-__
+
+2020-10-20 19:01:21.666232
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201855-__
+
+2020-10-20 19:06:21.536621
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201900-__
+
+2020-10-20 19:11:21.950094
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201905-__
+
+2020-10-20 19:11:42.700741
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MTOP-GLBSST_FIELD-202010201200Z.nc
+
+2020-10-20 19:14:21.559090
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201900-__
+
+2020-10-20 19:14:21.569892
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201900-__
+
+2020-10-20 19:16:21.676590
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201910-__
+
+2020-10-20 19:21:21.853983
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201915-__
+
+2020-10-20 19:26:21.843694
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201920-__
+
+2020-10-20 19:29:21.718035
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201915-__
+
+2020-10-20 19:29:21.718036
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201915-__
+
+2020-10-20 19:31:21.693617
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201925-__
+
+2020-10-20 19:36:21.712390
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201930-__
+
+2020-10-20 19:37:23.088645
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201800Z.nc
+
+2020-10-20 19:41:22.136220
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201935-__
+
+2020-10-20 19:44:21.835737
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201930-__
+
+2020-10-20 19:44:21.842696
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201930-__
+
+2020-10-20 19:46:21.919410
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201940-__
+
+2020-10-20 19:51:21.775448
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201945-__
+
+2020-10-20 19:56:21.805004
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201950-__
+
+2020-10-20 19:59:22.696086
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010201945-__
+
+2020-10-20 19:59:22.701804
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010201945-__
+
+2020-10-20 20:01:21.871520
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010201955-__
+
+2020-10-20 20:06:21.862411
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202000-__
+
+2020-10-20 20:11:21.913088
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202005-__
+
+2020-10-20 20:14:22.136559
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202000-__
+
+2020-10-20 20:14:22.146311
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202000-__
+
+2020-10-20 20:16:22.387717
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202010-__
+
+2020-10-20 20:21:22.031285
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202015-__
+
+2020-10-20 20:25:22.771203
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202020-__
+
+2020-10-20 20:29:24.014204
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202015-__
+
+2020-10-20 20:29:24.019704
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202015-__
+
+2020-10-20 20:31:22.511371
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202025-__
+
+2020-10-20 20:35:24.158518
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010201900Z.nc
+
+2020-10-20 20:36:22.157318
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202030-__
+
+2020-10-20 20:41:22.143085
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202035-__
+
+2020-10-20 20:44:22.607038
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202030-__
+
+2020-10-20 20:44:22.611389
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202030-__
+
+2020-10-20 20:46:22.421576
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202040-__
+
+2020-10-20 20:51:22.181531
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202045-__
+
+2020-10-20 20:56:22.187577
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202050-__
+
+2020-10-20 20:59:22.473626
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202045-__
+
+2020-10-20 20:59:22.474099
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202045-__
+
+2020-10-20 21:01:22.289794
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202055-__
+
+2020-10-20 21:06:22.229571
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202100-__
+
+2020-10-20 21:10:22.780639
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202105-__
+
+2020-10-20 21:14:23.142342
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202100-__
+
+2020-10-20 21:14:23.399525
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202100-__
+
+2020-10-20 21:16:22.411637
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202110-__
+
+2020-10-20 21:20:22.565255
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202115-__
+
+2020-10-20 21:26:22.509514
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202120-__
+
+2020-10-20 21:29:22.844187
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202115-__
+
+2020-10-20 21:29:22.845439
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202115-__
+
+2020-10-20 21:31:22.858872
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202125-__
+
+2020-10-20 21:36:22.641604
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202130-__
+
+2020-10-20 21:36:23.798527
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010202000Z.nc
+
+2020-10-20 21:41:23.030793
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202135-__
+
+2020-10-20 21:44:22.527746
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202130-__
+
+2020-10-20 21:44:22.539045
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202130-__
+
+2020-10-20 21:46:22.936526
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202140-__
+
+2020-10-20 21:51:22.545259
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202145-__
+
+2020-10-20 21:56:22.584167
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202150-__
+
+2020-10-20 21:59:22.859411
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202145-__
+
+2020-10-20 21:59:22.862060
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202145-__
+
+2020-10-20 22:01:22.944920
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202155-__
+
+2020-10-20 22:06:22.610736
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202200-__
+
+2020-10-20 22:11:22.693240
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202205-__
+
+2020-10-20 22:14:22.850150
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202200-__
+
+2020-10-20 22:14:22.861177
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202200-__
+
+2020-10-20 22:16:22.957977
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202210-__
+
+2020-10-20 22:21:22.697946
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202215-__
+
+2020-10-20 22:26:22.711022
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202220-__
+
+2020-10-20 22:29:23.028762
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202215-__
+
+2020-10-20 22:29:23.033635
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202215-__
+
+2020-10-20 22:31:22.970074
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202225-__
+
+2020-10-20 22:36:22.949054
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202230-__
+
+2020-10-20 22:36:24.044118
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010202100Z.nc
+
+2020-10-20 22:41:22.742004
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202235-__
+
+2020-10-20 22:44:22.947629
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202230-__
+
+2020-10-20 22:44:23.135320
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202230-__
+
+2020-10-20 22:45:22.953286
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202240-__
+
+2020-10-20 22:51:22.794996
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202245-__
+
+2020-10-20 22:56:22.845587
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202250-__
+
+2020-10-20 22:59:23.230847
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202245-__
+
+2020-10-20 22:59:23.264639
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202245-__
+
+2020-10-20 23:01:23.014545
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202255-__
+
+2020-10-20 23:06:22.925956
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202300-__
+
+2020-10-20 23:11:22.931631
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202305-__
+
+2020-10-20 23:14:22.989104
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202300-__
+
+2020-10-20 23:14:23.005634
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202300-__
+
+2020-10-20 23:16:23.462659
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202310-__
+
+2020-10-20 23:21:22.988205
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202315-__
+
+2020-10-20 23:34:24.068710
+/home/data/eumetcast//bas/E1B-SAF-1/S-OSI_-FRA_-MSG_-H__SST_FIELD-202010202200Z.nc
+
+2020-10-20 23:36:23.021946
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202330-__
+
+2020-10-20 23:41:23.053294
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202335-__
+
+2020-10-20 23:44:23.253739
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202330-__
+
+2020-10-20 23:44:23.269944
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202330-__
+
+2020-10-20 23:46:23.163195
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202340-__
+
+2020-10-20 23:51:23.116422
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202345-__
+
+2020-10-20 23:56:23.140243
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-EPI______-202010202350-__
+
+2020-10-20 23:59:23.315263
+/home/data/eumetcast//bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-_________-EPI______-202010202345-__
+
+2020-10-20 23:59:23.338000
+/home/data/eumetcast//bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-_________-EPI______-202010202345-__
+
