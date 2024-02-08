@@ -10,10 +10,25 @@ Please download the installation manual at the following link: [Link](https://ww
 
 **Demonstration and Community Collaboration:** For an online version of SHOWCast, installed, configured and adapted by [MARN - El Salvador](https://www.ambiente.gob.sv/), please access the following link: http://srt.ambiente.gob.sv/showcast.html
 
-The image below shows SHOWCast being used by MARN:
+The images below shows SHOWCast being used by MARN:
 ![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/238e7dcc-6bc1-4ff8-9104-bc76101e8beb)
+
+![image](https://github.com/diegormsouza/showcast/assets/54595784/090b1195-a9f1-45ac-a6e7-e46e28a335f0)
 
 SHOWCast has also been adapted by the HNMS (Hellenic National Meteorological Service) - Greece:
 ![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/d7f6a298-68fa-41c5-afd3-331e33624884)
+
+SHOWCast adapted by INMET, the Brazilian NWS:
+![image](https://github.com/diegormsouza/showcast/assets/54595784/d4d285c5-7900-40f3-87ca-7967eb6a2a1b)
+
+Usage by the Uruguayan Air Force:
+![image](https://github.com/diegormsouza/showcast/assets/54595784/204fd054-ff3b-4f83-986e-cdb902163ae0)
+
+Usage by IPMet - Brazil:
+![image](https://github.com/diegormsouza/showcast/assets/54595784/05fd36da-851d-448a-b0a2-829c528f34e6)
+
+Usage by CPTEC/INPE - Brazil:
+![image](https://github.com/diegormsouza/showcast/assets/54595784/602429b5-889e-43d4-81c8-f333e6b38c5c)
+
 
 To check the files being processed by SHOWCast, please access the following GNC-A ingestion folder, kindly provided by SSEC/CIMMS: http://geonetcast.ssec.wisc.edu/geonetcast/
