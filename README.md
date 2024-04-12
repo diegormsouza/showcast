@@ -21,6 +21,9 @@ The images below shows SHOWCast being used by MARN:
 
 ![image](https://github.com/diegormsouza/showcast/assets/54595784/090b1195-a9f1-45ac-a6e7-e46e28a335f0)
 
+The image below shows SHOWCast being used by the Brazilian Navy:
+![image](https://github.com/diegormsouza/showcast/assets/54595784/ca262634-b696-4699-856c-e705af05bd8c)
+
 SHOWCast has also been adapted by the HNMS (Hellenic National Meteorological Service) - Greece:
 ![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/d7f6a298-68fa-41c5-afd3-331e33624884)
 
