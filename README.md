@@ -10,7 +10,11 @@ Please download the installation manual at the following link: [Link](https://ww
 
 **Video:** Introduction to SHOWCast - https://www.youtube.com/watch?v=3f6plgAF9Ro
 
-**Demonstration and Community Collaboration:** For an online version of SHOWCast, installed, configured and adapted by [MARN - El Salvador](https://www.ambiente.gob.sv/), please access the following link: http://srt.ambiente.gob.sv/showcast.html
+**Demonstration and Community Collaboration:** 
+
+For an online version of SHOWCast, installed, configured and adapted by [MARN - El Salvador](https://www.ambiente.gob.sv/), please access the following link: http://srt.ambiente.gob.sv/showcast.html
+
+For an online version of SHOWCast, installed, configured and adapted by [The Brazilian Navy](https://www.marinha.mil.br/dhn/), please access the following link: https://www.smm.mil.br/smm/satelite/SHOWCast_v_2_5_1/HTML/SHOWCast_SEC.html
 
 The images below shows SHOWCast being used by MARN:
 ![image](https://github.com/diegormsouza/SHOWCast/assets/54595784/238e7dcc-6bc1-4ff8-9104-bc76101e8beb)
