@@ -1,0 +1,255 @@
+---------------------------------------------------------------------------
+
+         TROPICAL WEATHER DISCUSSION (NORTH ATLANTIC AREA) MESSAGES        
+
+T1T2: AX
+A1A2: NT
+
+Date: 2025-05-27
+
+---------------------------------------------------------------------------
+
+Message File: T_AXNT20KNHC272312_C_KWBC_20250527231313_23921124-77-TWDAT.txt
+
+****0000005870****
+AXNT20 KNHC 272312
+
+TWDAT 
+
+
+
+Tropical Weather Discussion
+
+NWS National Hurricane Center Miami FL
+
+0015 UTC Wed May 28 2025
+
+
+
+Tropical Weather Discussion for North America, Central America
+
+Gulf of America, Caribbean Sea, northern sections of South
+
+America, and Atlantic Ocean to the African coast from the
+
+Equator to 31N. The following information is based on satellite
+
+imagery, weather observations, radar and meteorological analysis.
+
+
+
+Based on 1800 UTC surface analysis and satellite imagery through
+
+2100 UTC.
+
+
+
+...TROPICAL WAVES...
+
+
+
+The axis of a tropical wave is along 47W from 03N to 14N moving 
+
+west at 10 to 15 kt. Scattered moderate isolated strong convection
+
+is ahead of the wave axis from 04N to 10N between 47W and 52W. 
+
+
+
+A tropical wave is moving across the central Caribbean. Its axis
+
+is along 73W, S of Haiti to northern Colombia. The wave is moving
+
+at 10 to 15 kt. The wave appears to enhance convection over
+
+northern Colombia and western Venezuela.
+
+
+
+...MONSOON TROUGH/ITCZ... 
+
+
+
+The monsoon trough enters the Atlantic near 13N17W and continues
+
+SW to near 07N22W. The ITCZ continues from 07N22W to 06N45W. 
+
+Scattered moderate convection is from 05N to 08N E of 15W to the
+
+coast of Africa, and from 06N to 08N between 30W and 45W.
+
+
+
+...GULF OF AMERICA...
+
+
+
+A surface trough is analyzed over the NW Gulf while a surface 
+
+ridge dominates the remainder of the basin. Scatterometer data
+
+indicate fresh to strong NE to E winds behind the trough axis. 
+
+A narrow band of showers and thunderstorms is associated with the
+
+trough. Moderate to fresh SE winds are elsewhere W of 90W while  
+
+mainly Light to gentle winds are over eastern Gulf. Seas are in 
+
+the 3 to 6 ft range W of 90W, and 1 to 3 ft E of 90W. Visible 
+
+satellite pictures showed smoke over the western Gulf, including
+
+the Bay of Campeche, creating hazy conditions. Observations 
+
+along the Mexican coast also confirmed the presence of hazy
+
+conditions.
+
+
+
+For the forecast, a surface ridge will prevail across the NE 
+
+Gulf through Thu. The pressure gradient between this area of high
+
+pressure and lower pressure over Mexico will support moderate to
+
+fresh SE winds across the western half of the Gulf. Fresh to 
+
+strong NE to E winds will pulse along and just north of the 
+
+Yucatan Peninsula each afternoon and evening through Thu night as
+
+a trough develops inland daily and then drifts westward to the 
+
+Bay of Campeche at night. Smoke from agricultural fires in SE 
+
+Mexico are expected to maintain hazy sky conditions across the 
+
+Bay of Campeche and western Gulf through the end of the week. A 
+
+weak cold front will move into the northern Gulf later this week.
+
+The front will stall from central Florida to Texas during the 
+
+weekend where it will gradually dissipate. 
+
+
+
+...CARIBBEAN SEA... 
+
+
+
+A ridge persists N of the area. The pressure gradient between 
+
+this ridge, and the Colombian low is supporting fresh to strong 
+
+winds over the south-central Caribbean. Moderate to fresh winds 
+
+prevail elsewhere, except in the lee of Cuba where gentle to 
+
+moderate winds are noted. Seas are in the 7 to 10 ft range over 
+
+the south-central Caribbean, and 5 to 7 ft elsewhere S of 18N and
+
+E of 82W. Seas of 3 to 5 ft are noted over the NW Caribbean with
+
+the exception of 5 to 7 ft in the Gulf of Honduras.
+
+
+
+As it is normal for this time of the year, convection has developed
+
+over parts of the Greater Antilles due to daytime heating, local
+
+sea breezes and mountain upslope lifting. Clear skies are offshore
+
+Colombia and in the Gulf of of Honduras due to the stronger 
+
+winds blowing there. Elsewhere, shallow moisture, embedded in the
+
+trade wind flow is moving across the basin producing isolated to
+
+scattered passing showers. 
+
+
+
+For the forecast, pressure gradient between high pressure north of 
+
+the region and the Colombian low will support fresh to strong NE 
+
+to E winds and rough seas in the central, and portions of the 
+
+southwest Caribbean through Sat night. Moderate to fresh trades 
+
+are forecast for the majority of the remainder basin, except for 
+
+pulsing fresh to strong winds in the Gulf of Honduras at night 
+
+through Fri. 
+
+
+
+...ATLANTIC OCEAN...
+
+
+
+High pressure of 1030 mb located in the vicinity of the Azores 
+
+dominates the Atlantic forecast waters. Its associated ridge 
+
+extends SW toward the Bahamas and Florida. Light to gentle winds 
+
+are along the ridge axis, with gentle to moderate winds elsewhere
+
+N of 20N and W of 20W. South of 20N, moderate to fresh winds are
+
+noted. Seas are in the 3 to 6 ft range N of 20N, and 6 to 8 ft S
+
+of 20N. Transverse high clouds are observed across the Leeward 
+
+Islands and regional Atlantic waters due to strong SW to W winds 
+
+aloft. Farther E, the pressure gradient between the ridge and 
+
+lower pressures over W Africa is resulting in fresh to strong 
+
+northerly winds between the Canary Islands. fresh to strong N
+
+winds are also noted from 18N to 23N between 17W and 22W. 
+
+
+
+For the forecast west of 55W, the Atlantic subtropical ridge will 
+
+persist from east to west along roughly 27N/28N through Fri night.
+
+The pressure gradient between this area of high pressure and the
+
+Colombian low will support moderate to fresh winds south of 25N.
+
+Otherwise, a series of weak frontal troughs will sweep eastward 
+
+across the waters north of the ridge and between northeast Florida
+
+and Bermuda through Thu. Moderate to fresh SW winds are forecast
+
+across the NE Florida offshore waters Thu night ahead of a cold 
+
+front forecast to move off the northern Florida coast Fri night. 
+
+The front will stall from 31N74W to NE Florida by Sat evening 
+
+before dissipating late Sun. Locally strong SW winds are forecast
+
+ahead of the front Fri night into Sat. 
+
+
+
+$$
+
+GR
+
+
+########################### END OF MESSAGE SET ############################
+

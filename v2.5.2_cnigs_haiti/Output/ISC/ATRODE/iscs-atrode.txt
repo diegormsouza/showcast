@@ -1,0 +1,249 @@
+---------------------------------------------------------------------------
+
+         TROPICAL WEATHER DISCUSSION (EASTERN PACIFIC AREA) MESSAGES       
+
+T1T2: AX
+A1A2: PZ
+
+Date: 2025-05-27
+
+---------------------------------------------------------------------------
+
+Message File: T_AXPZ20KNHC272110_C_KWBC_20250527211156_19661156-120-TWDEP.txt
+
+****0000005639****
+AXPZ20 KNHC 272110
+
+TWDEP 
+
+
+
+Tropical Weather Discussion
+
+NWS National Hurricane Center Miami FL
+
+2205 UTC Tue May 27 2025
+
+
+
+Tropical Weather Discussion for the eastern Pacific Ocean from
+
+03.4S to 30N, east of 120W including the Gulf of California, and
+
+from the Equator to 30N, between 120W and 140W. The following
+
+information is based on satellite imagery, weather observations,
+
+radar, and meteorological analysis.
+
+
+
+Based on 1800 UTC surface analysis and satellite imagery through
+
+2100 UTC.
+
+
+
+...SPECIAL FEATURES...
+
+
+
+Satellite imagery shows showers and thunderstorms becoming better 
+
+organized near a broad area of low pressure located several hundred 
+
+miles south of the coast of southern Mexico. Numerous moderate to
+
+scattered strong convection is noted from 10N to 15N between 97W
+
+and 105W. While the system still lacks a well-defined circulation,
+
+environmental conditions are favorable for further development, 
+
+and a tropical depression or tropical storm is expected to form 
+
+tonight or on Wednesday as the low moves generally west-northwestward
+
+at around 5 to 10 mph. There is a high chance of tropical formation
+
+within the next 48 hours. Regardless of development, this system
+
+will bring numerous showers and thunderstorms along with higher 
+
+winds and seas to portions of the offshore waters from Oaxaca to 
+
+Jalisco through late week. A Gale Warning has been issued in 
+
+association with this developing system. 
+
+
+
+Refer to the latest NHC Tropical Weather Outlook at 
+
+www.hurricanes.gov, and the latest High Seas Forecast issued by 
+
+the National Hurricane Center at website 
+
+https://www.nhc.noaa.gov/text/MIAHSFEP2.shtml for more details
+
+
+
+...INTERTROPICAL CONVERGENCE ZONE/MONSOON TROUGH...
+
+
+
+The monsoon trough extends from 09N84W to a 1008 mb low pressure
+
+located near 13N101.5W to 11N115W. The ITCZ axis continues from 
+
+11N115W to beyond 07N140W. Aside from the convection associated 
+
+with the low pressure located near 13N101.5W, scattered moderate
+
+to isolated strong convection can be found from 14N to 16N 
+
+between 92W and 97W, from 07N to 11N between 105W and 110W and 
+
+from 05N to 10N between 118W and 131W.
+
+
+
+...OFFSHORE WATERS WITHIN 250 NM OF MEXICO...
+
+
+
+Please, see the Special Features section above for information 
+
+on a low pressure located south of southern Mexico that is 
+
+likely to develop into a tropical depression or tropical storm 
+
+within the next 48 hours. 
+
+
+
+A ridge, anchored by a 1025 mb high pressure centered near 34N132W,
+
+extends over the Baja California offshore waters, reaching the 
+
+Revillagigedo Islands. This system continues to support moderate 
+
+to locally fresh NW winds west of the Baja California peninsula, 
+
+with moderate seas. Mainly light and variable winds currently 
+
+dominate the Gulf of California, the waters between Cabo Corrientes
+
+and Los Cabos, and the coastal waters of the remainder of Mexico.
+
+Over the outer offshore waters from Oaxaca to Michoacan, moderate
+
+to fresh winds and moderate to rough seas are noted in association
+
+with the development of a tropical system. 
+
+
+
+For the forecast, the ridge will continue to dominate the offshore
+
+forecast waters of Baja California through early Fri producing 
+
+moderate to locally fresh NW winds, with moderate seas.
+
+
+
+...OFFSHORE WATERS WITHIN 250 NM OF CENTRAL AMERICA, COLOMBIA, 
+
+AND WITHIN 750 NM OF ECUADOR...
+
+
+
+Recent satellite derived wind data indicate fresh NE winds across
+
+the Papagayo region and downwind to about 87W. Elsewhere, light
+
+to gentle winds, with moderate to locally rough seas in SW swell
+
+prevail. Locally higher winds and seas are likely occurring near
+
+the convective activity along the monsoon trough. 
+
+
+
+For the forecast, high pressure N of the area combined with fresh to
+
+strong trade winds across the south-central and SW Caribbean will
+
+continue to support fresh to locally strong NE to E winds in the
+
+Papagayo region and downwind to near 88W tonight and again Wed night.
+
+Elsewhere, light to gentle winds will persist N of the monsoon trough,
+
+with gentle to locally moderate S to SW winds prevailing to the S
+
+of it through Fri. Long period SW swell will build across the offshore
+
+forecast waters late this week, likely leading to rough seas south
+
+of the Galapagos Islands by Fri into Sat. 
+
+
+
+...REMAINDER OF THE AREA....
+
+
+
+Please, see the Special Features section above for information 
+
+on a low pressure located south of southern Mexico that is 
+
+likely to develop into a tropical depression or tropical storm 
+
+within the next 48 hours. 
+
+
+
+High pressure of 1024 mb dominates most of the waters N of the 
+
+ITCZ/Monsoon Trough and W of 110W while lower pressures persist E
+
+of 100W related to the development of tropical cyclone. 
+
+Gentle to moderate N to NE winds and moderate seas prevail under
+
+the influence of the ridge, with some locally fresh NE trades N 
+
+of the ITCZ to about 13N and W of 120. Otherwise, moderate or 
+
+weaker winds and moderate seas prevail. 
+
+
+
+For the forecast, high pressure will remain in control of the 
+
+weather pattern across most of the forecast waters N of the 
+
+ITCZ/Monsoon trough and W of 110W through late week as the high 
+
+pressure center remains nearly stationary over the NW corner of 
+
+the forecast region. This will support moderate to locally fresh 
+
+trade winds mainly W of 130W. Farther south, a new set of long 
+
+period SW swell will cross the equator on Wed, building seas to  
+
+8 to 9 ft over most of the waters S of 10N between 100W and 122W
+
+by late Fri.
+
+
+
+$$
+
+GR
+
+
+########################### END OF MESSAGE SET ############################
+
