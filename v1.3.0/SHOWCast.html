@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="refresh" content="60">
+<title>SHOWCast: GNC-A Visualization</title>
+
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="HTML/jquery.min.js"></script>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style3 {font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style5 {font-size: 10px}
+.style6 {font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
+.style7 {font-size: 10}
+.style8 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.style9 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+.style10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+p {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+body {
+  background-image: url('HTML/showcast_background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+img { border-style: none; }
+-->
+</style>
+</head>
+
+<body>
+<script language="JavaScript">
+
+$(document).ready(function(){
+  $('#product_selected').on('change', function () {
+       var url = $(this).val(); 
+       if (url) { 
+           window.open(url, '_self');
+          }
+          return false;
+        });
+});
+
+</script>
+<noscript>
+</noscript>
+
+<div align="center">
+  
+  <h1><img src="HTML/showcast_logo.png" width="1024" height="105" /><span class="style3"><br/>
+    <br/>
+    GEONETCast-Americas Product Visualization Webpage</span>
+	<br/>
+    <!--<span class="style6">GOES-R: ABI Bands | GLM | RGB | Baseline Products</span></h1>-->
+    <span class="style6">Click on the images to visualize the latest quicklook or click on the hiperlinks to open the animation window</span></h1>
+	
+	<span class="style9">Visualization Area:</span>
+	<select id="product_selected">
+    <option value="SHOWCast.html"selected>Full Disk</option>
+	<option value="HTML/SHOWCast_SEC.html">User Sector</option>
+	</select>
+	<br>
+	<br>
+	
+  <table width="1024" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "7" Align = "Center"><B><span class="style3">GOES-16 - ABI INDIVIDUAL BANDS</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND02_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND02_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND07_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND07_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND08_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND08_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND09_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND09_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND14_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND14_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_BAND15_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_BAND15_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND02_FDK.html" target="_blank">- Band 02 -</a></span></p>
+		<p><span class="style4"><a>0.64 um ("Blue")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band02.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND07_FDK.html" target="_blank">- Band 07 -</a></span></p>
+		<p><span class="style4"><a>3.90 um ("SW Window")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band07.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND08_FDK.html" target="_blank">- Band 08 -</a></span></p>
+		<p><span class="style4"><a>6.20 um ("Up.-Level WV")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band08.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND09_FDK.html" target="_blank">- Band 09 -</a></span></p>
+		<p><span class="style4"><a>6.90 um ("Mid-Level WV")</a></span></p>		
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band09.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>10.30 um ("Clean IR LW")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band13.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND14_FDK.html" target="_blank">- Band 14 -</a></span></p>
+		<p><span class="style4"><a>11.20 um ("IR LW Window")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band14.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_BAND15_FDK.html" target="_blank">- Band 15 -</a></span></p>
+		<p><span class="style4"><a>12.30 um ("Dirty IR LW")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band15.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+   <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "5" Align = "Center"><B><span class="style3">GOES-16 - BANDS COMPOSITES / MULTISPECTRAL IMAGERY / GLM</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_FCOLOR_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_FCOLOR_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_IRCL13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_IRCL13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_IRCE13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_IRCE13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_SWDIFF_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_SWDIFF_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_GLMIRC_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_GLMIRC_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_FCOLOR_FDK.html" target="_blank">- Band 02 -</a></span></p>
+		<p><span class="style4"><a>False Color</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_IRCL13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>IR Clouds</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_IRCE13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>IR Clouds Enhanced</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_SWDIFF_FDK.html" target="_blank">- Split Window Difference -</a></span></p>
+		<p><span class="style4"><a>10.30 um - 12.30 um</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_SplitWindowDifference.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_GLMIRC_FDK.html" target="_blank">- GLM -</a></span></p>
+		<p><span class="style4"><a>Group Density (5 min)</a></span></p>
+        <p><span class="style4"><a href="Guides/GLM_Quick_Guide_Detection_Methods_June_2018.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+  <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "9" Align = "Center"><B><span class="style3">GOES-16 RGB COMPOSITES</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_ARMRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_ARMRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CONRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CONRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DCPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DCPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DLCRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DLCRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>		
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_ARMRGB_FDK.html" target="_blank">- Airmass -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_GOESR_AirMassRGB_final.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLPRGB_FDK.html" target="_blank">- Cloud Phase -</a></span></p>
+        <p><span class="style4"><a href="Guides/CloudPhaseRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CONRGB_FDK.html" target="_blank">- Day Convection -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_GOESR_DayConvectionRGB_final.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DCPRGB_FDK.html" target="_blank">- Day Cloud Phase -</a></span></p>
+        <p><span class="style4"><a href="Guides/Day_Cloud_Phase_Distinction.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DLCRGB_FDK.html" target="_blank">- Day Land Cloud -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_GOESR_daylandcloudRGB_final.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+	<tr>
+ <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DMPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DMPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSTRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSTRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_NMPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_NMPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_NTCRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_NTCRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_TRURGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_TRURGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DMPRGB_FDK.html" target="_blank">- Day Microphysics -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_DtMicroRGB_NASA_SPoRT.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSTRGB_FDK.html" target="_blank">- Dust -</a></span></p>
+        <p><span class="style4"><a href="Guides/Dust_RGB_Quick_Guide.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_NMPRGB_FDK.html" target="_blank">- Night Microphysics -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_GOESR_NtMicroRGB_final.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_NTCRGB_FDK.html" target="_blank">- Natural True Color -</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_CIMSSRGB_v2.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_TRURGB_FDK.html" target="_blank">- True Color -</a></span></p>
+        <p><span class="style4"><a href="Guides/QuickGuide_TrueColorRGB_NASA_SPoRT.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+  <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "5" Align = "Center"><B><span class="style3">GOES-16 - BASELINE PRODUCTS</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDHGT_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDHGT_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDTMP_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDTMP_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDMSK_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDMSK_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDPHA_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDPHA_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_AERDET_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_AERDET_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDHGT_FDK.html" target="_blank">- Cloud Top Height -</a></span></p>
+		<p><span class="style4"><a>ACHAF (HT)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineCloudTopHeight.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDTMP_FDK.html" target="_blank">- Cloud Top Temperature -</a></span></p>
+		<p><span class="style4"><a>ACHTF (TEMP)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineCloudTopTemperature.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDMSK_FDK.html" target="_blank">- Clear Sky Masks -</a></span></p>
+		<p><span class="style4"><a>ACMF (BCM)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineClearSkyMask.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDPHA_FDK.html" target="_blank">- Cloud Top Phase -</a></span></p>
+		<p><span class="style4"><a>ACTPF (Phase)</a></span></p>		
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_AERDET_FDK.html" target="_blank">- Aerosol Detection -</a></span></p>
+		<p><span class="style4"><a>ADPF (Smoke and Dust)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineAerosolDetection.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+
+    <tr>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_AEROPT_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_AEROPT_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDOPT_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDOPT_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDPAS_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDPAS_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_CLDPRE_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_CLDPRE_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DMWF13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DMWF13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_AEROPT_FDK.html" target="_blank">- Aerosol Optical Depth -</a></span></p>
+		<p><span class="style4"><a>AODF (AOD)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineAerosolOpticalDepth.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDOPT_FDK.html" target="_blank">- Cloud Optical Depth -</a></span></p>
+		<p><span class="style4"><a>CODF (COD)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineCloudOpticalDepth.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDPAS_FDK.html" target="_blank">- Cloud Particle Size -</a></span></p>
+		<p><span class="style4"><a>CPSF (PSD)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineCloudParticleSizeDistribution.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_CLDPRE_FDK.html" target="_blank">- Cloud Top Pressure -</a></span></p>
+		<p><span class="style4"><a>CTPF (PRES)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineCloudTopPressure.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DMWF13_FDK.html" target="_blank">- Derived Motion Winds -</a></span></p>
+		<p><span class="style4"><a>DMWF (Band 14)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedMotionWinds.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+	
+	<tr>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSCAPE_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSCAPE_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSINKI_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSINKI_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSINLI_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSINLI_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSINSI_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSINSI_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSINTT_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSINTT_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+
+    </tr>
+    <tr>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSCAPE_FDK.html" target="_blank">- Derived Stability Indices (CAPE) -</a></span></p>
+		<p><span class="style4"><a>DSIF (CAPE)</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedStabilityIndices.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSINKI_FDK.html" target="_blank">- Derived Stability Indices (KI) -</a></span></p>
+		<p><span class="style4"><a>DSIF (KI)</a></span></p>		
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedStabilityIndices.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSINLI_FDK.html" target="_blank">- Derived Stability Indices (LI) -</a></span></p>
+		<p><span class="style4"><a>DSIF (LI)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedStabilityIndices.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSINSI_FDK.html" target="_blank">- Derived Stability Indices (SI) -</a></span></p>
+		<p><span class="style4"><a>DSIF (SI)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedStabilityIndices.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSINTT_FDK.html" target="_blank">- Derived Stability Indices (TT) -</a></span></p>
+		<p><span class="style4"><a>DSIF (TT)</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_BaselineDerivedStabilityIndices.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr>
+	
+	    <tr>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_DSRADI_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_DSRADI_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_FIRMSK_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_FIRMSK_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_SNOWCO_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_SNOWCO_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_LSTSKN_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_LSTSKN_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_RRQPEF_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_RRQPEF_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_DSRADI_FDK.html" target="_blank">- Downward Shortwave Radiation -</a></span></p>
+		<p><span class="style4"><a>DSRF (DSR)</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_FIRMSK_FDK.html" target="_blank">- Fire-Hot Spot Characterization -</a></span></p>
+		<p><span class="style4"><a>FDCF (Mask)</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_SNOWCO_FDK.html" target="_blank">- Snow Cover -</a></span></p>
+		<p><span class="style4"><a>FSCF (FSC)</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_LSTSKN_FDK.html" target="_blank">- Land Surface (Skin) Temperature -</a></span></p>
+		<p><span class="style4"><a>LSTF (LST)</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_RRQPEF_FDK.html" target="_blank">- Rainfall Rate - Quantitative Prediction Estimate -</a></span></p>
+		<p><span class="style4"><a>RRQPEF (RRQPE)</a></span></p>		
+        </div></td>
+    </tr> 
+	
+	    <tr>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_RSRADI_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_RSRADI_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_SSTSKN_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_SSTSKN_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_TOTPWA_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_TOTPWA_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_VASHCH_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_VASHCH_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G16_VASHML_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G16_VASHML_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_RSRADI_FDK.html" target="_blank">- Reflected Shortwave Radiation -</a></span></p>
+		<p><span class="style4"><a>RSRF (RSR)</a></span></p>	
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_SSTSKN_FDK.html" target="_blank">- Sea Surface (Skin) Temperature -</a></span></p>
+		<p><span class="style4"><a>SSTF (SST)</a></span></p>	
+        <p><span class="style4"><a href="Guides/QuickGuide_SST_20180503.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_TOTPWA_FDK.html" target="_blank">- Total Precipitable Water -</a></span></p>
+		<p><span class="style4"><a>TPWF (TPW)</a></span></p>	
+        <p><span class="style4"><a href="Guides/QuickGuide_TPW_20180306.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_VASHCH_FDK.html" target="_blank">- Ash / Dust Cloud Height -</a></span></p>
+		<p><span class="style4"><a>VAAF (VAH)</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G16_VASHML_FDK.html" target="_blank">- Ash / Dust Loading -</a></span></p>
+		<p><span class="style4"><a>VAAF (VAML)</a></span></p>
+        </div></td>
+    </tr> 	
+	
+  </table>
+  <br/>
+
+  
+  <table width="1024" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "7" Align = "Center"><B><span class="style3">GOES-17 - ABI INDIVIDUAL BANDS</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND02_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND02_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND07_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND07_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND08_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND08_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND09_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND09_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND14_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND14_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_BAND15_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_BAND15_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND02_FDK.html" target="_blank">- Band 02 -</a></span></p>
+		<p><span class="style4"><a>0.64 um ("Blue")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band02.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND07_FDK.html" target="_blank">- Band 07 -</a></span></p>
+		<p><span class="style4"><a>3.90 um ("SW Window")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band07.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND08_FDK.html" target="_blank">- Band 08 -</a></span></p>
+		<p><span class="style4"><a>6.20 um ("Up.-Level WV")</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band08.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND09_FDK.html" target="_blank">- Band 09 -</a></span></p>
+		<p><span class="style4"><a>6.90 um ("Mid-Level WV")</a></span></p>		
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band09.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>10.30 um ("Clean IR LW")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band13.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND14_FDK.html" target="_blank">- Band 14 -</a></span></p>
+		<p><span class="style4"><a>11.20 um ("IR LW Window")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band14.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_BAND15_FDK.html" target="_blank">- Band 15 -</a></span></p>
+		<p><span class="style4"><a>12.30 um ("Dirty IR LW")</a></span></p>	
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_Band15.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+   <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "5" Align = "Center"><B><span class="style3">GOES-17 - BANDS COMPOSITES / MULTISPECTRAL IMAGERY</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_FCOLOR_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_FCOLOR_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_IRCL13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_IRCL13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_IRCE13_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_IRCE13_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/G17_SWDIFF_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/G17_SWDIFF_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_FCOLOR_FDK.html" target="_blank">- Band 02 -</a></span></p>
+		<p><span class="style4"><a>False Color</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_IRCL13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>IR Clouds</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_IRCE13_FDK.html" target="_blank">- Band 13 -</a></span></p>
+		<p><span class="style4"><a>IR Clouds Enhanced</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/G17_SWDIFF_FDK.html" target="_blank">- Split Window Difference -</a></span></p>
+		<p><span class="style4"><a>10.30 um - 12.30 um</a></span></p>
+        <p><span class="style4"><a href="Guides/ABIQuickGuide_SplitWindowDifference.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+  <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "6" Align = "Center"><B><span class="style3">METEOSAT 0° - SEVIRI INDIVIDUAL BANDS (3-HOURLY)</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_VIS006_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_VIS006_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_VIS008_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_VIS008_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_NIR016_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_NIR016_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD039_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD039_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_WVP062_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_WVP062_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_WVP073_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_WVP073_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_VIS006_FDK.html" target="_blank">- Band 01 -</a></span></p>
+		<p><span class="style4"><a>0.64 um ("VIS 0.6")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_VIS008_FDK.html" target="_blank">- Band 02 -</a></span></p>
+		<p><span class="style4"><a>0.81 um ("VIS 0.8")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_NIR016_FDK.html" target="_blank">- Band 03 -</a></span></p>
+		<p><span class="style4"><a>1.64 um ("NIR 1.6")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD039_FDK.html" target="_blank">- Band 04 -</a></span></p>
+		<p><span class="style4"><a>3.90 um ("IR 3.9")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_WVP062_FDK.html" target="_blank">- Band 05 -</a></span></p>
+		<p><span class="style4"><a>6.25 um ("WV 6.2")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_WVP073_FDK.html" target="_blank">- Band 06 -</a></span></p>
+		<p><span class="style4"><a>7.35 um ("WV 7.3")</a></span></p>
+        </div></td>
+    </tr> 
+	<tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD087_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD087_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD097_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD097_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD108_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD108_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD120_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD120_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRD134_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRD134_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_HRVCHN_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_HRVCHN_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD087_FDK.html" target="_blank">- Band 07 -</a></span></p>
+		<p><span class="style4"><a>8.70 um ("IR 8.7")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD097_FDK.html" target="_blank">- Band 08 -</a></span></p>
+		<p><span class="style4"><a>9.66 um ("IR 9.7")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD108_FDK.html" target="_blank">- Band 09 -</a></span></p>
+		<p><span class="style4"><a>10.80 um ("IR 10.8")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD120_FDK.html" target="_blank">- Band 10 -</a></span></p>
+		<p><span class="style4"><a>12.00 um ("IR 12.0")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRD134_FDK.html" target="_blank">- Band 11 -</a></span></p>
+		<p><span class="style4"><a>13.40 um ("IR 13.4")</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_HRVCHN_FDK.html" target="_blank">- Band 12 -</a></span></p>
+		<p><span class="style4"><a>Broadband ("HRV")</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+  <table width="500" border="5">
+    <tr>
+    <td bgcolor="#ccc9c0" Colspan = "6" Align = "Center"><B><span class="style3">METEOSAT 0° RGB COMPOSITES (3-HOURLY)</th>
+    </tr>    
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_ARMRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_ARMRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_ASHRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_ASHRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_TOPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_TOPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_CONRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_CONRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_DLCRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_DLCRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_DMPRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_DMPRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_ARMRGB_FDK.html" target="_blank">- Airmass -</a></span></p>
+        <p><span class="style4"><a href="Guides/AirmassRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_ASHRGB_FDK.html" target="_blank">- Ash -</a></span></p>
+        <p><span class="style4"><a href="Guides/AshRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_TOPRGB_FDK.html" target="_blank">- Cloud Top -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_CONRGB_FDK.html" target="_blank">- Day Convection -</a></span></p>
+        <p><span class="style4"><a href="Guides/SevereStormsRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_DLCRGB_FDK.html" target="_blank">- Day Land Cloud -</a></span></p>
+        <p><span class="style4"><a href="Guides/NaturalColoursRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_DMPRGB_FDK.html" target="_blank">- Day Microphysics -</a></span></p>
+        <p><span class="style4"><a href="Guides/DaymicroRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+    </tr> 
+	<tr>
+        <td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_DSTRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_DSTRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_FOGRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_FOGRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_IRORGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_IRORGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_NFORGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_NFORGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_OVWRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_OVWRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" align="center" valign="middle"><div align="center">
+		<a href="HTML/Output/QuickLooks/MSG_SNWRGB_FDK_quicklook.png" target="_blank">
+        <img src="HTML/Output/QuickLooks/MSG_SNWRGB_FDK_quicklook.png" alt="" border=3 height=150 width=150></img>
+		</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_DSTRGB_FDK.html" target="_blank">- Dust -</a></span></p>
+        <p><span class="style4"><a href="Guides/DustRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+		</div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_FOGRGB_FDK.html" target="_blank">- Fog -</a></span></p>
+		<p><span class="style4"><a href="Guides/24MicroRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_IRORGB_FDK.html" target="_blank">- IR Overview -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_NFORGB_FDK.html" target="_blank">- Night Microphysics -</a></span></p>
+		<p><span class="style4"><a href="Guides/NightRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_OVWRGB_FDK.html" target="_blank">- Overview -</a></span></p>
+        </div></td>
+		<td bgcolor="#f2f0e9" width="200px" height="10px" align="center" valign="middle"><div align="center">
+        <p><span class="style4"><a href="HTML/MSG_SNWRGB_FDK.html" target="_blank">- Snow -</a></span></p>
+		<p><span class="style4"><a href="Guides/SnowRGB.pdf" target="_blank">- Quick Guide -</a></span></p>
+        </div></td>
+    </tr> 
+  </table>
+  <br/>
+  
+  <p class="style9">SHOWCast: Simple HTML Operational Wrapper for GEONETCast-Americas - Developed by Diego Souza</p>
+  <p class="style10">Last Update: January 20th 2019 (v 1.3.0)
+  </p>
+  </div>
+</body>
+</html>
