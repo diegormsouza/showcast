@@ -6,6 +6,8 @@ Please download the installation manual at the following link: [Link](https://ww
 
 **Introduction:** SHOWCast ia a processing and visualization tool for GEONETCast-Americas users, providing a basic HTML structure for product selection and animation, and Python scripts to convert satellite data into imagery automatically. SHOWCast can also be used with other satellite reception mechanisms like GRB, Amazon AWS and UNIDATA THREDDS. The package runs on both Windows and Linux operational systems.
 
+![WhatsApp Image 2025-05-29 at 10 59 32_81b19692](https://github.com/user-attachments/assets/20a06600-ec29-435d-b4b9-43817e875c2c)
+
 **Objective:** The primary goals for the development of SHOWCast are: Provide a free tool that can be customized (both processing and visualization) and put into operations without the need of having a BIG knowledge in programming and web development (human resources issue) and provide a free tool that can be adapted to the available hardware (technology resources issue).
 
 **Video:** Introduction to SHOWCast - https://www.youtube.com/watch?v=3f6plgAF9Ro
