@@ -1,0 +1,591 @@
+#######################################################################################################
+# LICENSE
+# Copyright (C) 2025 - INPE - NATIONAL INSTITUTE FOR SPACE RESEARCH - BRAZIL
+# This program is free software: you can redistribute it and/or modify it under the terms of the GNU 
+# General Public License as published by the Free Software Foundation, either version 3 of the License, 
+# or (at your option) any later version.
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General 
+# Public License for more details.
+# You should have received a copy of the GNU General Public License along with this program. 
+# If not, see http://www.gnu.org/licenses/.
+#######################################################################################################
+__author__ = "Diego Souza"
+__copyright__ = "Copyright (C) 2025 - INPE - NATIONAL INSTITUTE FOR SPACE RESEARCH - BRAZIL"
+__credits__ = ["Diego Souza", "Regina Ito"]
+__license__ = "GPL"
+__version__ = "2.5.2"
+__maintainer__ = "Diego Souza"
+__email__ = "diego.souza@inpe.br"
+__status__ = "Production"
+#------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
+# Required modules
+#--------------------------------
+#to run in a pure text terminal:
+import matplotlib
+matplotlib.use('Agg')
+#--------------------------------
+import pygrib                                                # Provides a high-level interface to the ECWMF ECCODES C library for reading GRIB files
+from datetime import datetime, timedelta                     # Library to convert julian day to dd-mm-yyyy
+from matplotlib.colors import LinearSegmentedColormap        # Linear interpolation for color maps
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes # Add a child inset axes to this existing axes.
+import matplotlib.colors                                     # Matplotlib colors
+import matplotlib.pyplot as plt                              # Plotting library
+import numpy as np                                           # Scientific computing with Python
+import cartopy, cartopy.crs as ccrs                          # Plot maps
+import cartopy.io.shapereader as shpreader                   # Import shapefiles
+import time as t                                             # Time access and conversion
+import sys                                                   # Import the "system specific parameters and functions" module
+import math                                                  # Import math
+from matplotlib.image import imread                          # Read an image from a file into an array
+import os                                                    # Miscellaneous operating system interfaces
+from os.path import dirname, abspath                         # Return a normalized absolutized version of the pathname path 
+from html_update import update                               # Update the HTML animation 
+import warnings                                              # Warning control
+warnings.filterwarnings("ignore")
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+def plot_maxmin_points(lon, lat, data, extrema, nsize, symbol, color='k',
+                       plotValue=True, transform=None):
+    """
+    This function will find and plot relative maximum and minimum for a 2D grid. The function
+    can be used to plot an H for maximum values (e.g., High pressure) and an L for minimum
+    values (e.g., low pressue). It is best to used filetered data to obtain  a synoptic scale
+    max/min value. The symbol text can be set to a string value and optionally the color of the
+    symbol and any plotted value can be set with the parameter color
+    lon = plotting longitude values (2D)
+    lat = plotting latitude values (2D)
+    data = 2D data that you wish to plot the max/min symbol placement
+    extrema = Either a value of max for Maximum Values or min for Minimum Values
+    nsize = Size of the grid box to filter the max and min values to plot a reasonable number
+    symbol = String to be placed at location of max/min value
+    color = String matplotlib colorname to plot the symbol (and numerica value, if plotted)
+    plot_value = Boolean (True/False) of whether to plot the numeric value of max/min point
+    The max/min symbol will be plotted on the current axes within the bounding frame
+    (e.g., clip_on=True)
+    """
+    from scipy.ndimage.filters import maximum_filter, minimum_filter
+
+    if (extrema == 'max'):
+        data_ext = maximum_filter(data, nsize, mode='nearest')
+    elif (extrema == 'min'):
+        data_ext = minimum_filter(data, nsize, mode='nearest')
+    else:
+        raise ValueError('Value for hilo must be either max or min')
+
+    mxy, mxx = np.where(data_ext == data)
+
+    for i in range(len(mxy)):
+         txt1 = ax.annotate(symbol, xy=(lon[mxy[i], mxx[i]], lat[mxy[i], mxx[i]]), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color=color, size=24,
+                clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center',
+                transform=ccrs.PlateCarree(), zorder=8)
+         
+         txt2 = ax.annotate('\n' + str(int(data[mxy[i], mxx[i]])), xy=(lon[mxy[i], mxx[i]], lat[mxy[i], mxx[i]]), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), 
+                color=color, size=12, clip_on=True, annotation_clip=True, fontweight='bold', horizontalalignment='center', verticalalignment='top',
+                transform=ccrs.PlateCarree(), zorder=8)
+
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+# Start the time counter
+print('Script started.')
+start = t.time()  
+
+# SHOWCast directory:
+main_dir = dirname(dirname(abspath(__file__)))
+
+# Choose the visualization extent (min lon, min lat, max lon, max lat)
+extent = [float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])]
+
+# Desired resolution
+resolution = int(sys.argv[6])
+
+# Define KM_PER_DEGREE
+KM_PER_DEGREE = 111.32
+
+# Compute grid dimension
+sizex = int(((extent[2] - extent[0]) * KM_PER_DEGREE) / resolution) 
+sizey = int(((extent[3] - extent[1]) * KM_PER_DEGREE) / resolution) 
+
+# For logging purposes
+path = (sys.argv[1])[:-16]
+
+# Image path
+path_gfs = path[:-7]
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+# Data you want to process
+# (to process only the analisys, end and inc should be equal).
+hour_ini = 0  # Init time  
+hour_end = 6  # End time
+hour_inc = 3  # Increment
+
+for hour in range(hour_ini, hour_end, hour_inc):
+
+    path_loop = path_gfs + str(hour).zfill(3)
+    print(path_loop)
+    
+    if (os.path.exists(path_loop)):
+    
+        print("Processing file: ", path_loop)
+        
+        # Open the GRIB file
+        grib = pygrib.open(path_loop)
+
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------   
+        # Read the total precipitation
+        try:
+            totpr = grib.select(name='Total Precipitation', typeOfLevel = 'surface')[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue  
+
+        #################################################################################
+        # For some reason the "Total Precipitation" variable doesnt' have the right keys!
+        title = grib.select(name='2 metre temperature')[0] 
+
+        # For later use
+        init  = title.analDate     # Analysis date / time
+        hour  = title.hour         # Run
+        ftime = title.forecastTime # Forecast hour
+        valid = title.validDate    # Valid date / time 
+
+        #print("GRIB Keys :", sfcps.keys())
+
+        # Read the run time
+        run = str(title.hour).zfill(2) + 'Z'
+        #################################################################################
+
+        # Read the data for a specific region
+        totpr, lats, lons = totpr.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)
+
+        # Converting the longitudes to -180 ~ 180
+        lons = lons - 360 
+
+        #totpr2 = totpr
+        #lons2 = lons
+        #lats2 = lats
+        #totpr2[totpr2 == 0] = np.nan
+
+        import scipy.ndimage
+        totpr = scipy.ndimage.zoom(totpr, 3)
+        lats = scipy.ndimage.zoom(lats, 3)
+        lons = scipy.ndimage.zoom(lons, 3)
+                
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+        # Read the PSML   
+        try:
+            prmls = grib.select(name='Pressure reduced to MSL')[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+            
+        # Read the data for a specific region
+        prmls = prmls.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # Convert to hPa
+        prmls = prmls / 100
+
+        # To smooth the contours
+        prmls = scipy.ndimage.zoom(prmls, 3)
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+        # Read the Geopotential Height at 1000 hPa
+        try:
+            hght_1000 = grib.select(name='Geopotential height', typeOfLevel = 'isobaricInhPa', level = 1000)[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+        
+        # Read the data for a specific region
+        hght_1000 = hght_1000.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # Read the Geopotential Height at 500 hPa hPa
+        try:
+            hght_500 = grib.select(name='Geopotential height', typeOfLevel = 'isobaricInhPa', level = 500)[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+         
+        # Read the data for a specific region
+        hght_500 = hght_500.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # Calculate and smooth 1000-500 hPa thickness
+        thickness_1000_500 = hght_500 - hght_1000
+        
+        # To smooth the contours
+        thickness_1000_500 = scipy.ndimage.zoom(thickness_1000_500, 3)
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+        # Read the 10 metre U component of wind   
+        try:
+            ucomp = grib.select(name='10 metre U wind component')[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+            
+        # Read the data for a specific region
+        ucomp = ucomp.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # To smooth the contours
+        ucomp = scipy.ndimage.zoom(ucomp, 3)
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+        # Read the 10 metre V component of wind  
+        try:
+            vcomp = grib.select(name='10 metre V wind component')[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+            
+        # Read the data for a specific region
+        vcomp = vcomp.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # To smooth the contours
+        vcomp = scipy.ndimage.zoom(vcomp, 3)
+        
+        # Calculate the wind speed
+        ws = np.sqrt(ucomp**2 + vcomp**2)
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+        # Read the total cloud cover 
+        try:
+            totcc = grib.select(name='Total Cloud Cover', typeOfLevel = 'atmosphere')[0]
+        except:
+            print("Field not available on the GRIB file. Skipping the current iteration.")
+            continue
+            
+        # Read the data for a specific region
+        totcc = totcc.data(lat1=extent[1],lat2=extent[3],lon1=extent[0]+360,lon2=extent[2]+360)[0]
+
+        # To smooth the contours
+        totcc = scipy.ndimage.zoom(totcc, 3)
+        
+        # Removing the values < 40%
+        totcc[totcc < 40] = np.nan
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------   
+        
+        # NOTE: FOR SOME REASON THE ZOOM WITH NAN CREATES WRONG VALUES, SO I HAD TO DO THE WORKAROUND BELOW (INVISIBLE COLORBAR AT THE BEGGINING)
+        
+        from matplotlib import cm                                          # Colormap handling utilities
+        # Create the color scale 
+        colors = ["#b4ffa2", "#6cf41e", "#66b81e", "#24b9b5", "#287bb9", "#3c70ff", "#6e4dff", "#c750fb", "#ff52fc"]
+        #cmap = matplotlib.colors.ListedColormap(colors)
+       
+        my_colors = cm.colors.LinearSegmentedColormap.from_list("",colors) # Create a custom colormap
+        my_colors = my_colors(np.linspace(0, 1, 256))                      # Create the array
+        my_colors[0:2,-1] = 0.0 #np.linspace(0.0,1.0, 1)#**2
+        cmap = LinearSegmentedColormap.from_list(name='my_cmap', colors=my_colors)
+
+        cmap.set_over('#f7323c')
+        cmap.set_under('#73ef24')
+        
+        vmin = 1
+        vmax = 90
+        thick_interval = 5
+
+        # Create the color scale for low values
+        colors2 = ["#daffd1", "#c7f4bc"]
+        
+        my_colors = cm.colors.LinearSegmentedColormap.from_list("",colors2) # Create a custom colormap
+        my_colors = my_colors(np.linspace(0, 1, 256))                      # Create the array
+        my_colors[0:80,-1] = 0.0#np.linspace(0.0,1.0, 128)#**2
+        cmap2 = LinearSegmentedColormap.from_list(name='my_cmap', colors=my_colors)
+        cmap2.set_over('#c7f4bc')
+        
+        vmin2 = 0.2
+        vmax2 = 1.0
+        thick_interval2 = 0.1
+
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+                        
+        # Product name
+        satellite = "GFS"
+        product   = "PWCPTH_" + run
+        
+        # Plot configuration
+        plot_config = {
+        "resolution": resolution, 
+        "dpi": 150, 
+        "states_color": 'black', "states_width": sizey * 0.00006, 
+        "countries_color": 'black', "countries_width": sizey * 0.00012,
+        "continents_color": 'black', "continents_width": sizey * 0.00025,
+        "grid_color": 'white', "grid_width": sizey * 0.00025, "grid_interval": 5.0,
+        "vmin": vmin, "vmax": vmax, "cmap": cmap,
+        "title_text": "GFS (0.5°): PSML (hPa) | 10m Wind (> 10kt) | Tot. Cld Cov. (%) | Prec. (3h) | 500-1000 hPa Thick. (m) " + " - " + "Init: " + str(init)[:-6] + "Z | F. Hour: [" + str(ftime).zfill(3) + "]" + " | Val.: " + str(valid)[:-6] + "Z ", "title_size": int(sizex * 0.005), "title_x_offset": int(sizex * 0.01), "title_y_offset": sizey - int(sizey * 0.016), 
+        "thick_interval": thick_interval, "cbar_labelsize": int(sizey * 0.005), "cbar_labelpad": -int(sizey * 0.00),
+        "file_name_id_1": satellite,  "file_name_id_2": product
+        }
+        #---------------------------------------------------------------------------------------------
+        #---------------------------------------------------------------------------------------------
+
+        # Choose the plot size (width x height, in inches)
+        fig = plt.figure(figsize=(sizex/float(plot_config["dpi"]), sizey/float(plot_config["dpi"])), dpi=plot_config["dpi"])
+          
+        # Define the projection
+        proj = ccrs.PlateCarree()
+
+        # Use the PlateCarree projection in cartopy
+        ax = plt.axes([0, 0, 1, 1], projection=proj)
+        #ax.set_extent([extent[0], extent[2], extent[1], extent[3]], ccrs.PlateCarree())
+
+        # Define the image extent
+        img_extent = [extent[0], extent[2], extent[1], extent[3]]
+
+        # Add a background image
+        import cartopy.feature as cfeature
+        land = ax.add_feature(cfeature.LAND, facecolor='peachpuff', zorder=1)
+        ocean = ax.add_feature(cfeature.OCEAN, facecolor='lightsteelblue', zorder=1)
+
+        #---------------------------------------------------------------------------------------------
+        
+        # Create the color scale 
+        colors = ["#e5e5e5", "#dfdfdf", "#d9d9d9", "#d2d2d2", "#cccccc"]
+        cmap_cloud = matplotlib.colors.ListedColormap(colors)
+        cmap_cloud.set_over('#c8c8c8')
+        cmap_cloud.set_under('#e5e5e5')
+        
+        #vmin = 40.0
+        #vmax = 100.0
+        #thick_interval = 5.0
+        
+        # Define de contour interval
+        data_min = 40.0
+        data_max = 100.0
+        interval = 5.0
+        levels = np.arange(data_min,data_max,interval)
+         
+        # Plot the image
+        img1 = ax.contourf(lons, lats, totcc, transform=ccrs.PlateCarree(), cmap=cmap_cloud, levels=levels, extend='both', alpha = 0.8, zorder=2)
+        
+        #---------------------------------------------------------------------------------------------
+        
+        # Plot the image (low values)
+        data_min2 = 0.0
+        data_max2 = 2.0
+        interval2 = 0.2
+        levels2 = np.arange(data_min2,data_max2,interval2)
+        #totpr2[totpr2 > 1] = np.nan
+        img2 = ax.contourf(lons, lats, totpr, transform=ccrs.PlateCarree(), cmap=cmap2, levels=levels2, zorder=3)
+        
+        # Plot the image (high values)
+        # Define de contour interval
+        data_min = 1
+        data_max = 90 
+        interval = 5
+        levels = np.arange(data_min,data_max,interval)
+        img3 = ax.contourf(lons, lats, totpr, transform=ccrs.PlateCarree(), cmap=cmap, levels=levels, extend='max', zorder=4)
+        img4 = ax.contour(lons, lats, totpr, transform=ccrs.PlateCarree(), colors='black', linewidths=0.1, levels=levels, zorder=5)
+        #ax.clabel(img2, inline=1, inline_spacing=0, fontsize=plot_config["cbar_labelsize"],fmt = '%1.0f', colors= 'black', zorder=6)
+        
+        #---------------------------------------------------------------------------------------------
+        
+        # Create a flag to determine which barbs are flipped
+        flip_flag = np.zeros((ucomp.shape[0],ucomp.shape[1]))
+
+        #print(flip_flag.shape)
+        #print(ucomp.shape)
+        #print(vcomp.shape)
+        #print(lons.shape)
+        #print(lats.shape)
+        #print(ws.shape)
+        
+        #print(ws.min())
+        #print(ws.max())
+        #print(ucomp.min())
+        #print(ucomp.max())
+        #print(vcomp.min())
+        #print(vcomp.max())
+        
+        # All flags below the equator will be flipped
+        flip_flag[lats < 0] = True
+        
+        # Remove barbs lower than 15 knots
+        ucomp[ws < 10] = np.nan
+        vcomp[ws < 10] = np.nan
+
+        img5 = ax.barbs(lons[::6,::6], lats[::6,::6], ucomp[::6,::6], vcomp[::6,::6], length = 5.0, sizes = dict(emptybarb=0.0, spacing=0.2, height=0.5), linewidth=0.8, pivot='middle', barbcolor='gray', flip_barb = flip_flag[::6,::6], transform=ccrs.PlateCarree(), zorder=7)
+
+        #---------------------------------------------------------------------------------------------
+               
+        # Define de contour interval
+        data_min = 5020
+        data_max = 6020 
+        interval = 20
+        levels = np.arange(data_min,data_max,interval)
+
+        # Plot the contours   
+        img6 = ax.contour(lons, lats, thickness_1000_500, cmap='seismic', linestyles='dashed', linewidths=1.0, levels=levels, zorder=8)
+        ax.clabel(img6, inline=1, inline_spacing=0, fontsize=plot_config["cbar_labelsize"],fmt = '%1.0f', zorder=9)
+
+        # Get the index of elements with value "5400"
+        mid_value = int(np.where(levels == 5520)[0])
+        img6.collections[mid_value].set_linewidth(4)  
+        img6.collections[mid_value].set_color('blue')
+
+        #---------------------------------------------------------------------------------------------
+        
+        # Define de contour interval
+        data_min = 990
+        data_max = 1050
+        interval = 2
+        levels = np.arange(data_min,data_max,interval)
+        
+        # Plot the PSML
+        img7 = ax.contour(lons, lats, prmls, colors='black', linewidths=1.0, levels=levels, zorder=10)
+        ax.clabel(img7, inline=1, inline_spacing=0, fontsize=plot_config["cbar_labelsize"],fmt = '%1.0f', colors= 'black', zorder=11)
+
+        # Use definition to plot H/L symbols
+        plot_maxmin_points(lons, lats, prmls, 'max', 50, symbol='H', color='b',  transform=ccrs.PlateCarree())
+        plot_maxmin_points(lons, lats, prmls, 'min', 25, symbol='L', color='r', transform=ccrs.PlateCarree())
+
+        #---------------------------------------------------------------------------------------------
+        
+        # Add states and provinces
+        shapefile = list(shpreader.Reader(main_dir + '//Shapefiles//ne_10m_admin_1_states_provinces.shp').geometries())
+        ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["states_color"],facecolor='none', linewidth=plot_config["states_width"], zorder=12)
+
+        # Add countries
+        shapefile = list(shpreader.Reader(main_dir + '//Shapefiles//ne_50m_admin_0_countries.shp').geometries())
+        ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["countries_color"],facecolor='none', linewidth=plot_config["countries_width"], zorder=13)
+
+        # Add continents
+        shapefile = list(shpreader.Reader(main_dir + '//Shapefiles//ne_10m_coastline.shp').geometries())
+        ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["continents_color"],facecolor='none', linewidth=plot_config["continents_width"], zorder=14)
+          
+        # Add gridlines
+        gl = gl = ax.gridlines(color=plot_config["grid_color"], alpha=1.0, linestyle='--', linewidth=0.25, xlocs=np.arange(-180, 180, 5), ylocs=np.arange(-180, 180, 5), draw_labels=True, zorder=9)
+        gl.left_labels = True; gl.right_labels = False; gl.top_labels = True; gl.bottom_labels = False
+        gl.xpadding = -plot_config["cbar_labelsize"]; gl.ypadding = -plot_config["cbar_labelsize"]
+        gl.ylabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
+        gl.xlabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
+
+        # Remove the outline border
+        ax.outline_patch.set_visible(False)
+          
+        # Add a title
+        #plt.title("GFS (0.5°): Total Precipitation", fontweight='bold', fontsize=7, loc='left')
+        #plt.title("Init: " + str(init)[:-6] + "Z | Forecast Hour: [" + str(ftime).zfill(3) + "]" + " | Valid: " + str(valid)[:-6] + "Z ", fontsize=6, loc='right')
+        
+        # Add a title
+        plt.annotate(plot_config["title_text"], xy=(plot_config["title_x_offset"], plot_config["title_y_offset"]), xycoords='figure pixels', fontsize=plot_config["title_size"], fontweight='bold', color='white', bbox=dict(boxstyle="round",fc=(0.0, 0.0, 0.0), ec=(1., 1., 1.)), zorder=15)
+       
+        # To put colorbar inside picture
+        axins1 = inset_axes(ax, width="2%", height="100%", loc='right', borderpad=0.0)
+        
+        # Add a colorbar
+        ticks = np.arange(plot_config["vmin"], plot_config["vmax"], plot_config["thick_interval"]).tolist()     
+        ticks = plot_config["thick_interval"] * np.round(np.true_divide(ticks,plot_config["thick_interval"]))
+        ticks = ticks[1:]
+        cb = fig.colorbar(img3, cax=axins1, orientation="vertical", ticks=ticks)
+        cb.set_label(label='Total Precipitation (mm)', size='10', weight='bold') 
+        cb.outline.set_visible(False)
+        cb.ax.tick_params(width = 0)
+        cb.ax.xaxis.set_tick_params(pad=plot_config["cbar_labelpad"])
+        cb.ax.yaxis.set_ticks_position('left')
+        cb.ax.yaxis.set_label_position('left')
+        cb.ax.tick_params(axis='y', colors='black', labelsize=plot_config["cbar_labelsize"])
+
+        #------------------------------------------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------
+        
+        # Add labels to specific coordinates
+
+        import configparser
+        conf = configparser.ConfigParser()
+        if ('.sam.' in path):
+            conf.read(main_dir + '//Utils//Labels//labels_gfs_sam.ini')
+        else:
+            conf.read(main_dir + '//Utils//Labels//labels_gfs_crb.ini')
+            
+        labels, city_lons, city_lats, x_offsets, y_offsets, sizes, colors, marker_types, marker_colors, marker_sizes = [],[],[],[],[],[],[],[],[],[]
+
+        for each_section in conf.sections():
+            for (each_key, each_val) in conf.items(each_section):
+                if (each_key == 'label'): labels.append(each_val)
+                if (each_key == 'lon'): city_lons.append(float(each_val))
+                if (each_key == 'lat'): city_lats.append(float(each_val))
+                if (each_key == 'x_offset'): x_offsets.append(float(each_val))
+                if (each_key == 'y_offset'): y_offsets.append(float(each_val))
+                if (each_key == 'size'): sizes.append(int(each_val))
+                if (each_key == 'color'): colors.append(each_val)
+                if (each_key == 'marker_type'): marker_types.append(each_val)
+                if (each_key == 'marker_color'): marker_colors.append(each_val)
+                if (each_key == 'marker_size'): marker_sizes.append(each_val)
+         
+        import matplotlib.patheffects as PathEffects
+        for label, xpt, ypt, x_offset, y_offset, size, col, mtype, mcolor, msize in zip(labels, city_lons, city_lats, x_offsets, y_offsets, sizes, colors, marker_types, marker_colors, marker_sizes):
+            ax.plot(xpt, ypt, str(mtype), color=str(mcolor), markersize=int(msize), transform=ccrs.Geodetic(), markeredgewidth=1.0, markeredgecolor=(0, 0, 0, 1), zorder=10)
+            txt = ax.text(xpt+x_offset , ypt+y_offset, label, fontsize=int(size), fontweight='bold', color=str(col), transform=ccrs.Geodetic(), zorder=11)
+            txt.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='black')])
+        
+        #------------------------------------------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------
+
+        # Add logos / images to the plot
+        my_logo = plt.imread(main_dir + '//Logos//my_logo.png')
+        newax = fig.add_axes([0.01, 0.01, 0.10, 0.10], anchor='SW', zorder=12) #  [left, bottom, width, height]. All quantities are in fractions of figure width and height.
+        newax.imshow(my_logo)
+        newax.axis('off')
+
+        #------------------------------------------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------
+        
+        # Create the satellite output directory if it doesn't exist
+        out_dir = (sys.argv[7]) + satellite
+        if not os.path.exists(out_dir):
+           os.mkdir(out_dir)
+
+        # Create the product output directory if it doesn't exist
+        out_dir = (sys.argv[7]) + satellite + '//' + product + '//'
+        if not os.path.exists(out_dir):
+           os.mkdir(out_dir)
+   
+        #------------------------------------------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------
+
+        # Save the image
+        plt.savefig(out_dir + satellite + '_' + product + '_' + str(init)[:-9].replace('-', '') + str(hour).zfill(2) + 'Z_' + str(ftime).zfill(3) + '.png', bbox_inches='tight', pad_inches=0)
+
+        # Convert to webp
+        from PIL.WebPImagePlugin import Image          
+        im = Image.open(out_dir + satellite + '_' + product + '_' + str(init)[:-9].replace('-', '') + str(hour).zfill(2) + 'Z_' + str(ftime).zfill(3) + '.png')
+        im.save(out_dir + satellite + '_' + product + '_' + str(init)[:-9].replace('-', '') + str(hour).zfill(2) + 'Z_' + str(ftime).zfill(3) + '.webp', format = "WebP", lossless = True)
+        im.close()
+        
+        # Update the animation
+        nfiles = 30
+        update(satellite, product, nfiles, sys.argv[7], sys.argv[8])
+
+        # Delete aux files
+        os.remove(out_dir + satellite + '_' + product + '_' + str(init)[:-9].replace('-', '') + str(hour).zfill(2) + 'Z_' + str(ftime).zfill(3) + '.png')  
+    
+    else:
+        
+        print("File not available.")
+
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+# Put the processed file on the log
+import datetime # Basic Date and Time types
+import pathlib  # Object-oriented filesystem paths
+# Get the file modification time
+mtime = datetime.datetime.fromtimestamp(pathlib.Path(path[:-4]).stat().st_mtime).strftime('%Y%m%d%H%M%S')
+# Write to the log
+with open(main_dir + '//Logs//gnc_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+    log.write(str(datetime.datetime.now()))
+    log.write('\n')
+    log.write(path + '_c' + mtime + '\n')
+    log.write('\n')
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+# Total processing time
+print('Total processing time:', round((t.time() - start),2), 'seconds.') 
