@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+
+<title></title>
+<meta charset="utf-8">
+<meta http-equiv="Cache-control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</meta>
+
+<link href="../Libraries/theme.css" rel="stylesheet">
+<script src="../Libraries/jquery/jQuery-3.4.1.js"></script>
+<script src="../Libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body onload="getLog()">
+
+	<main>
+		<div class="container-fluid p-0 d-flex h-100 flex-column text-white">
+         <div class="row h-100">
+            <!-- Side Panel -->
+			<div class="col-lg-2 col-md-2  h-100 p-2 side-panel-parent">
+                <div id="side-panel">
+                    <div class="card text-center" id="view-panel">
+                        <div class="card-header">
+							<a href="SHOWCast.html"><i id="homeButton" class="rounded fa fa-home" aria-hidden="true"></i></a>
+                            Log File
+                        </div>
+                    </div>
+                    <hr>
+                    <hr>
+                    <div class="card text-center" id="logos-panel">
+                        <div class="card-header">
+                            Supported by:
+                        </div>
+                        <div class="card-body">
+                            <img src="../Logos/pmk_logo.png">
+                            <img src="../Logos/pytroll_white_logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Main Column -->
+			<div class="justify-content-center h-100 flex-column" >
+				<div id="div_log" class="d-block">
+					<!-- Table for SHOWCast Log -->
+					<table>
+						<tr>
+							<td>SHOWCast Log File</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="height:80vh;overflow:auto;">
+									<ul id="log" style="list-style-type:none;"> SHOWCast Log File </ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+         </div>
+      </div>
+	</main>
+	
+	<script>
+	function getLog(){
+	   $.getJSON( "../PHP/getLog.php", function( data ) {
+	     var $log = $('#log');
+	     $log.empty();
+	     $.each( data, function( key, val ) {
+                $log.append( "<li>" + val + "</li>" );
+              });
+	   });	   
+	}
+	
+    $(function(){
+        setInterval("getLog()",360000);
+
+    });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+name: showcast
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - cartopy=0.20
+  - matplotlib=3.4
+  - tropycal
+  - eccodes
+  - pylint
+  - dbfread
+  - psycopg2
+  - affine
+  - folium
+  - gdal
+  - geopandas
+  - glymur
+  - metpy
+  - netcdf4
+  - pandas
+  - pygrib
+  - pyhdf
+  - pyorbital
+  - pyproj
+  - pyresample
+  - rasterstats
+  - satpy
+  - siphon
+  - pip
+  - pip:
+    - Pillow==8.4.0
+    - eccodes

@@ -1,0 +1,16 @@
+Shared by William Abarca - MARN - El Salvador:
+
+A continuación comparto detalles de lo que he trabajado para integrar los datos del NHC con los datos de GOES:
+
+    Utilizo los datos para GIS disponibles en NHC Data in GIS Formats: https://www.nhc.noaa.gov/gis/
+    Utilizo la libreria tropycal para determinar los sistemas ya definidos con nombre o número.
+    Los shapefiles se agregan como capas adicionales a cualquier script, por ejemplo el de bandas individuas, etc.
+
+El flujo de procesamiento es este
+
+    Cada vez que hay un nuevo .nc de la banda el script se ejecuta de forma normal.
+    Descarga los archivos gis para todas las areas de vigilancia: nhc_gis_files = "https://www.nhc.noaa.gov/xgtwo/gtwo_shapefiles.zip"
+    Se extraen los shapefiles y se agregan como capas (aquí se puede jugar con los colores de acuerdo a las probabilidades y los textos que se extraen de los shapefiles para ubicar los centros y las probabilidades)
+    Se utiliza tropycal para encontrar los sistemas activos (invest o no)
+    Se descargan los archivos gis para cada sistema con la proyección para 5 días "https://www.nhc.noaa.gov/gis/forecast/archive/"+name.lower()+"_5day_latest.zip"
+    Se agregan como capas, al igual que en el paso 3

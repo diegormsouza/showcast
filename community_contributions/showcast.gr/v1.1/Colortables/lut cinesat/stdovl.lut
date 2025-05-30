@@ -1,0 +1,16 @@
+240 	   0 	  0 	  0 	# Black
+241 	   0 	  0 	128 	# Blue
+242 	   0 	128 	  0 	# Green
+243 	   0 	128 	128 	# Cyan
+244 	 128 	  0 	  0 	# Red
+245 	 128 	  0 	128 	# Magenta
+246 	 128 	128 	  0 	# Brown
+247 	 128 	128 	128 	# Darkgray
+248 	 192 	192 	192 	# Lightgray
+249 	   0 	  0 	255 	# LightBlue
+250 	   0 	255 	  0 	# LightGreen
+251 	   0 	255 	255 	# LightCyan
+252 	 255 	  0 	  0 	# LightRed
+253 	 255 	  0 	255 	# LightMagenta
+254 	 255 	255 	  0 	# Yellow
+255 	 255 	255 	255 	# White

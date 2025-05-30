@@ -1,0 +1,26 @@
+Fri Oct 23 16:06:01 GMT 2020
+270473464   1132 -rw-r--r--   1  root     root      1158823 Oct 22 16:05 /home/data/eumetcast/bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-HRV______-000007___-202010221600-C_
+807034736   1080 -rw-r--r--   1  root     root      1105448 Oct 22 16:05 /home/data/eumetcast/bas/E1B-GEO-1/H-000-MSG1__-MSG1_IODC___-HRV______-000008___-202010221600-C_
+  5039623    416 -rw-r--r--   1  root     root       425551 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-_________-PRO______-202010221605-__
+270314680    368 -rw-r--r--   1  root     root       374242 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_5/H-000-MSG3__-MSG3_RSS____-HRV______-000016___-202010221605-C_
+559983629     56 -rw-r--r--   1  root     root        55681 Oct 22 16:05 /home/data/eumetcast/bas/EPS-10/W_XX-EUMETSAT-Darmstadt,SOUNDING+SATELLITE,METOPC+AVHRR_C_EUMR_20201022153403_10167_eps_o_amv_l2d.bin
+807054247     52 -rw-r--r--   1  root     root        51638 Oct 22 16:05 /home/data/eumetcast/bas/EPS-10/W_XX-EUMETSAT-Darmstadt,SOUNDING+SATELLITE,METOPC+AVHRR_C_EUMR_20201022153403_10167_eps_o_amv_l2t.bin
+807054248     52 -rw-r--r--   1  root     root        49731 Oct 22 16:05 /home/data/eumetcast/bas/EPS-10/W_XX-EUMETSAT-Darmstadt,SOUNDING+SATELLITE,METOPC+AVHRR_C_EUMR_20201022153403_10167_eps_o_amv_l2.bin
+  5021559    848 -rw-r--r--   1  root     root       866159 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_097___-000003___-202010221600-C_
+  5039624    688 -rw-r--r--   1  root     root       701021 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-WV_073___-000003___-202010221600-C_
+  5039625    808 -rw-r--r--   1  root     root       826257 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_120___-000003___-202010221600-C_
+270314655    864 -rw-r--r--   1  root     root       882397 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_039___-000003___-202010221600-C_
+270460877    836 -rw-r--r--   1  root     root       853831 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_108___-000003___-202010221600-C_
+270460901   1488 -rw-r--r--   1  root     root      1520271 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-HRV______-000009___-202010221600-C_
+271114158    832 -rw-r--r--   1  root     root       848009 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-VIS008___-000003___-202010221600-C_
+559740645    788 -rw-r--r--   1  root     root       803225 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-WV_062___-000003___-202010221600-C_
+559740646    884 -rw-r--r--   1  root     root       905164 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_016___-000003___-202010221600-C_
+559757679   1428 -rw-r--r--   1  root     root      1461660 Oct 22 16:06 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-HRV______-000010___-202010221600-C_
+807034733    812 -rw-r--r--   1  root     root       829333 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-VIS006___-000003___-202010221600-C_
+807034738    900 -rw-r--r--   1  root     root       921436 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_087___-000003___-202010221600-C_
+807034740    860 -rw-r--r--   1  root     root       879201 Oct 22 16:05 /home/data/eumetcast/bas/EUMETSAT_Data_Channel_2/H-000-MSG4__-MSG4________-IR_134___-000003___-202010221600-C_
+ 60049528   5712 -rw-r--r--   1  root     root      5847903 Oct 21 16:05 /db/Output/MSG/DSTRGB_FDK/MSG_DSTRGB_FDK_202010211545.png
+ 60049529   5616 -rw-r--r--   1  root     root      5747818 Oct 21 16:05 /db/Output/MSG/FOGRGB_FDK/MSG_FOGRGB_FDK_202010211545.png
+ 60049530   4660 -rw-r--r--   1  root     root      4771454 Oct 21 16:05 /db/Output/MSG/NFORGB_FDK/MSG_NFORGB_FDK_202010211545.png
+ 60049531   1348 -rw-r--r--   1  root     root      1379244 Oct 21 16:06 /db/Output/MSG_RSS/VIS006_EU/MSG_RSS_VIS006_EU_202010211600.png
+ 60049527   4936 -rw-r--r--   1  root     root      5054236 Oct 21 16:05 /db/Output/MSG_RSS/HCDRGB_EU/MSG_RSS_HCDRGB_EU_202010211555.png
