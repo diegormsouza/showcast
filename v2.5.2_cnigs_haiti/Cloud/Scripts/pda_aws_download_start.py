@@ -53,22 +53,22 @@ os.system(script)
 print("------------- Monitor Script Executed -------------")
 print("Waiting for next call. The interval is", seconds, "seconds.")
 #------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------	
+#------------------------------------------------------------------------------------------------------    
 # Scheduler function
 s = sched.scheduler(time.time, time.sleep)
 
 def call_monitor(sc): 
-	# Call the function for the first time without the interval
-	print("\n")
-	print("------------- Calling Monitor Script --------------")
-	print("")
-	script = python_env + 'python ' + main_dir + '//Cloud//Scripts//pda_aws_download_config.py'
-	print(script)
-	os.system(script)
-	print("------------- Monitor Script Executed -------------")
-	print("Waiting for next call. The interval is", seconds, "seconds.")
-	s.enter(seconds, 1, call_monitor, (sc,))
-	
+    # Call the function for the first time without the interval
+    print("\n")
+    print("------------- Calling Monitor Script --------------")
+    print("")
+    script = python_env + 'python ' + main_dir + '//Cloud//Scripts//pda_aws_download_config.py'
+    print(script)
+    os.system(script)
+    print("------------- Monitor Script Executed -------------")
+    print("Waiting for next call. The interval is", seconds, "seconds.")
+    s.enter(seconds, 1, call_monitor, (sc,))
+    
 # Call the monitor
 s.enter(seconds, 1, call_monitor, (s,))
 s.run()

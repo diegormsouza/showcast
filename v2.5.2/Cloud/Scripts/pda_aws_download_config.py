@@ -19,28 +19,28 @@ INSTRUCTIONS FOR USERS:
 
 3-) For each product on the product list, choose:
 
-	- First line: If the product should be downloaded (True) or not (False).
+    - First line: If the product should be downloaded (True) or not (False).
 
-	- Second line: AWS product name (don't change it!)
+    - Second line: AWS product name (don't change it!)
 
-	- Third line: Which channels should be downloaded for each selected "True" product. The products that 
-	  has 'False' on the channels list, are not channel based.
+    - Third line: Which channels should be downloaded for each selected "True" product. The products that 
+      has 'False' on the channels list, are not channel based.
 
-	- Third line (for MESOSCALE only): Which mesoscale sector(s) you wanto to download. 
+    - Third line (for MESOSCALE only): Which mesoscale sector(s) you wanto to download. 
 
-	- Fourth line: Which minutes (scans) should be downloaded for each selected "True" product. The default 
-	  options are the ones available for each product. For example the "SST" is an hourly product, so only 
-	  the option '00' is available for it.
+    - Fourth line: Which minutes (scans) should be downloaded for each selected "True" product. The default 
+      options are the ones available for each product. For example the "SST" is an hourly product, so only 
+      the option '00' is available for it.
 
-	- Fifth line: The folder you want to store your data. In the end, data will be stored on:
-	  ingest_folder + product folder + Band (if the product is channel based)
-	  Note: The default folder names are just suggestions. Change it to any name you want / need.
-	  Also, when downloading GOES-17 data, the folder name will be changed to "GOES-S" instead of "GOES-R"
+    - Fifth line: The folder you want to store your data. In the end, data will be stored on:
+      ingest_folder + product folder + Band (if the product is channel based)
+      Note: The default folder names are just suggestions. Change it to any name you want / need.
+      Also, when downloading GOES-17 data, the folder name will be changed to "GOES-S" instead of "GOES-R"
 
 IMPORTANT: This script was created for the SHOWCast utility, however it might be used as a standalone script
 By default, it assumes it is inside a folder called "Cloud" and inside this "Cloud" folder you must have a 
 "Logs" folder and an "Apps" folder, with the Rclone software in it. To download Rclone, please access:
-https://rclone.org/downloads/	
+https://rclone.org/downloads/    
 
 Note: If you want to use this script to download historical data, just manually change YEAR, JULIAN DAY and 
 HOUR, keeping UTC_DIFF as 0 (zero).
@@ -57,12 +57,12 @@ __status__ = "Production"
 #------------------------------------------------------------------------------------------------------
 # Required modules
 #------------------------------------------------------------------------------------------------------
-import os           					# Miscellaneous operating system interfaces
-import subprocess   					# The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
-import datetime     					# Basic date and time types
-import platform     					# Access to underlying platform’s identifying data
-import time as t    					# Time access and conversion
-import re           					# Regular expression operations
+import os                               # Miscellaneous operating system interfaces
+import subprocess                       # The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
+import datetime                         # Basic date and time types
+import platform                         # Access to underlying platform’s identifying data
+import time as t                        # Time access and conversion
+import re                               # Regular expression operations
 from os.path import dirname, abspath    # Return a normalized absolutized version of the pathname path 
 #------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------
@@ -561,7 +561,7 @@ ABI_L2_TPWM         = False
 ABI_L2_TPWM_Product = 'ABI-L2-TPWM'
 ABI_L2_TPWM_Channel = ['False']
 ABI_L2_TPWM_Mesoscl = ['M1', 'M2']
-ABI_L2_TPWM_Minutes = 		['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
+ABI_L2_TPWM_Minutes =         ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
 ABI_L2_TPWM_Folders = 'GOES-R-Level-2-Products//TPWM//'
 
 #------------------------------------------------------------------------------------------------------
@@ -730,14 +730,14 @@ main_dir = dirname(dirname(dirname(abspath(__file__))))
 # Detecing the O.S.
 osystem = platform.system()
 if osystem == "Windows": 
-	extension = '.exe'
+    extension = '.exe'
 else:
-	extension = ''
+    extension = ''
 
 # Create the tmp directory if it doesn't exist
 tmp_dir = main_dir + '//Cloud//Scripts//tmp//'
 os.makedirs(tmp_dir, exist_ok=True)
-	
+    
 print ("") 
 print ("--------------------------------------------------------") 
 print ("GOES-R Big Data Python / Rclone Downloader: Current Data")
@@ -761,9 +761,9 @@ HOUR = str(datetime.datetime.now(timezone.utc).hour).zfill(2)                   
 # Checking if it is a leap year
 import calendar
 if (calendar.isleap(int(YEAR)) == True):
-	last_day = 366 # if it is a leap year, the last julian day is 366
+    last_day = 366 # if it is a leap year, the last julian day is 366
 else:
-	last_day = 365 # if it is NOT a leap year, the last julian day is 365
+    last_day = 365 # if it is NOT a leap year, the last julian day is 365
 
 # Printing Time and Data information for user check
 print("Current year, julian day and hour based on your local machine:")
@@ -778,282 +778,282 @@ print("")
 
 for BUCKET in BUCKETS: # Loop through satellites 
 
-	for product in PRODUCTS: # Loop through products 
+    for product in PRODUCTS: # Loop through products 
 
-		PRODUCT = globals()[product.replace("-", "_")+"_Product"]
-		CHANNEL = globals()[product.replace("-", "_")+"_Channel"]
-		MINUTES = globals()[product.replace("-", "_")+"_Minutes"]
-		OUTDIR  = ingest_folder + globals()[product.replace("-", "_")+"_Folders"]
-		
-		if (BUCKET == 'noaa-goes17'): OUTDIR = OUTDIR.replace("-R-", "-S-") # If GOES-17, replace -R- for -S- on the folders name.
-   		if (BUCKET == 'noaa-goes18'): OUTDIR = OUTDIR.replace("-R-", "-T-") # If GOES-18, replace -R- for -T- on the folders name.
-		if (BUCKET == 'noaa-goes19'): OUTDIR = OUTDIR.replace("-R-", "-R-") # If GOES-19, keep -R-
+        PRODUCT = globals()[product.replace("-", "_")+"_Product"]
+        CHANNEL = globals()[product.replace("-", "_")+"_Channel"]
+        MINUTES = globals()[product.replace("-", "_")+"_Minutes"]
+        OUTDIR  = ingest_folder + globals()[product.replace("-", "_")+"_Folders"]
         
-		# Create the product output directory if it doesn't exist
-		if not os.path.exists(OUTDIR):
-			os.makedirs(OUTDIR, exist_ok=True)
-			
-		# Checking if it is a Mesoscale product
-		if (product[-1] == "M"): 
+        if (BUCKET == 'noaa-goes17'): OUTDIR = OUTDIR.replace("-R-", "-S-") # If GOES-17, replace -R- for -S- on the folders name.
+        if (BUCKET == 'noaa-goes18'): OUTDIR = OUTDIR.replace("-R-", "-T-") # If GOES-18, replace -R- for -T- on the folders name.
+        if (BUCKET == 'noaa-goes19'): OUTDIR = OUTDIR.replace("-R-", "-R-") # If GOES-19, keep -R-
+        
+        # Create the product output directory if it doesn't exist
+        if not os.path.exists(OUTDIR):
+            os.makedirs(OUTDIR, exist_ok=True)
+            
+        # Checking if it is a Mesoscale product
+        if (product[-1] == "M"): 
 
-			MESOSCL = globals()[product.replace("-", "_")+"_Mesoscl"]
+            MESOSCL = globals()[product.replace("-", "_")+"_Mesoscl"]
 
-			for channel in CHANNEL:
-			
-				for mesoscale in MESOSCL:
-				
-					# Get output from rclone command, based on the desired data
-					print ("--------------------------------------------------------") 
-					print ("")
-					print("Command used:")
-					
-					if osystem == "Windows": 
-						#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/")
-						files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/", shell=True)
-					else:
-						#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-						files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf', shell=True)
-					
-					# Change type from 'bytes' to 'string'
-					files = files.decode()
-					# Split files based on the new line and remove the empty item at the end.
-					files = files.split('\n')
-					files.remove('')
-					
-					if (channel != 'False'):
-						# Get only the file names for an specific channel
-						files = [x for x in files if channel in x ]
-						OUTDIR = ingest_folder + globals()[product.replace("-", "_")+"_Folders"] + 'Band' + channel[-2:] + '//'
-						if not os.path.exists(OUTDIR):
-							os.makedirs(OUTDIR, exist_ok=True)
-					
-					# Get only the file names for an specific mesoscale sector
-					files = [x for x in files if mesoscale + '-' in x ]
-					
-					# Get only the file names, without the file sizes
-					files = [i.split(" ")[-1] for i in files]
-					# Print the file names list
-					#print ("File list for this particular time, date and channel:")
-					#for i in files:
-					#    print(i)
-				
-					# If there aren't files available yet
-					if not files:
-						print("")
-						print("No files available yet... Exiting script")
-						print("")
-						break # No new files available in the cloud yet. Exiting the loop.
-				
-					print("")
-					print("File Name: ", files[-1])
-					print("")		
-					print("Checking if the file is on the daily log...")
-					# If the log file doesn't exist yet, create one
-					file = open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
-					file.close()
-					# Put all file names on the log in a list
-					log = []
-				
-					# Open the log to check the files already processed 
-					with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
-						log = f.readlines()
-						# Remove the line feeds
-						log = [x.strip() for x in log]
-					
-					# If a given file is not on the log
-					if files[-1] not in log:
-						print("")
-						print ("Checking if the file is from a desired minute...")
-					
-						# Search in the file name if the image from GOES is from a desired minute.
-						matches = 0 # Initialize matches
-						for minute in MINUTES: 
-							#print(minute)
-							#print(r'(?:s.........' + str(minute) + ')..._')
-							regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
-							finder = re.findall(regex, files[-1])
-							# If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
-							matches = len(finder)
-							#print(matches)
-							# If it is from a desired minute, exit verification loop
-							if (matches == 1): break
-							
-						if matches == 0: # If there are no matches
-							print("This is not an image from a desired minute... Exiting loop.")
-							# Put the processed file on the log
-							import datetime   # Basic Date and Time types
-							with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-								log.write(str(datetime.datetime.now()))
-								log.write('\n')
-								log.write(files[-1] + '\n')
-								log.write('\n')
-							break # This is not an image from minute 20 or 50. Exiting the loop.
-						else:
-							if (channel != 'False'):
-								print ("")
-								print ("Downloading the most recent file for channel: ", channel)
-							else:
-								print ("")
-								print ("Downloading the most recent file: ")
-							
-							# Download the most recent file for this particular hour
-							print(files[-1])
-							if osystem == "Windows": 
-								#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR)
-								os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir)
-								# When the download is finished, move the file to the final directory
-								import shutil
-								shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
-							else:
-								#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-								os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-								# When the download is finished, move the file to the final directory
-								import shutil
-								shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
-							print ("")
-							print ("Download finished!") 
-							print ("Putting the file name on the daily log...")
-							print("")
+            for channel in CHANNEL:
+            
+                for mesoscale in MESOSCL:
+                
+                    # Get output from rclone command, based on the desired data
+                    print ("--------------------------------------------------------") 
+                    print ("")
+                    print("Command used:")
+                    
+                    if osystem == "Windows": 
+                        #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/")
+                        files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/", shell=True)
+                    else:
+                        #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                        files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf', shell=True)
+                    
+                    # Change type from 'bytes' to 'string'
+                    files = files.decode()
+                    # Split files based on the new line and remove the empty item at the end.
+                    files = files.split('\n')
+                    files.remove('')
+                    
+                    if (channel != 'False'):
+                        # Get only the file names for an specific channel
+                        files = [x for x in files if channel in x ]
+                        OUTDIR = ingest_folder + globals()[product.replace("-", "_")+"_Folders"] + 'Band' + channel[-2:] + '//'
+                        if not os.path.exists(OUTDIR):
+                            os.makedirs(OUTDIR, exist_ok=True)
+                    
+                    # Get only the file names for an specific mesoscale sector
+                    files = [x for x in files if mesoscale + '-' in x ]
+                    
+                    # Get only the file names, without the file sizes
+                    files = [i.split(" ")[-1] for i in files]
+                    # Print the file names list
+                    #print ("File list for this particular time, date and channel:")
+                    #for i in files:
+                    #    print(i)
+                
+                    # If there aren't files available yet
+                    if not files:
+                        print("")
+                        print("No files available yet... Exiting script")
+                        print("")
+                        break # No new files available in the cloud yet. Exiting the loop.
+                
+                    print("")
+                    print("File Name: ", files[-1])
+                    print("")        
+                    print("Checking if the file is on the daily log...")
+                    # If the log file doesn't exist yet, create one
+                    file = open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
+                    file.close()
+                    # Put all file names on the log in a list
+                    log = []
+                
+                    # Open the log to check the files already processed 
+                    with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
+                        log = f.readlines()
+                        # Remove the line feeds
+                        log = [x.strip() for x in log]
+                    
+                    # If a given file is not on the log
+                    if files[-1] not in log:
+                        print("")
+                        print ("Checking if the file is from a desired minute...")
+                    
+                        # Search in the file name if the image from GOES is from a desired minute.
+                        matches = 0 # Initialize matches
+                        for minute in MINUTES: 
+                            #print(minute)
+                            #print(r'(?:s.........' + str(minute) + ')..._')
+                            regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
+                            finder = re.findall(regex, files[-1])
+                            # If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
+                            matches = len(finder)
+                            #print(matches)
+                            # If it is from a desired minute, exit verification loop
+                            if (matches == 1): break
+                            
+                        if matches == 0: # If there are no matches
+                            print("This is not an image from a desired minute... Exiting loop.")
+                            # Put the processed file on the log
+                            import datetime   # Basic Date and Time types
+                            with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                                log.write(str(datetime.datetime.now()))
+                                log.write('\n')
+                                log.write(files[-1] + '\n')
+                                log.write('\n')
+                            break # This is not an image from minute 20 or 50. Exiting the loop.
+                        else:
+                            if (channel != 'False'):
+                                print ("")
+                                print ("Downloading the most recent file for channel: ", channel)
+                            else:
+                                print ("")
+                                print ("Downloading the most recent file: ")
+                            
+                            # Download the most recent file for this particular hour
+                            print(files[-1])
+                            if osystem == "Windows": 
+                                #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR)
+                                os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir)
+                                # When the download is finished, move the file to the final directory
+                                import shutil
+                                shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
+                            else:
+                                #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                                os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                                # When the download is finished, move the file to the final directory
+                                import shutil
+                                shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
+                            print ("")
+                            print ("Download finished!") 
+                            print ("Putting the file name on the daily log...")
+                            print("")
 
-							#---------------------------------------------------------------------------------------------
-							#---------------------------------------------------------------------------------------------
-				
-							# Put the processed file on the log
-							import datetime   # Basic Date and Time types
-							with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-								log.write(str(datetime.datetime.now()))
-								log.write('\n')
-								log.write(files[-1] + '\n')
-								log.write('\n')
-					else:
-						print("This file was already downloaded.")
-						print("")
+                            #---------------------------------------------------------------------------------------------
+                            #---------------------------------------------------------------------------------------------
+                
+                            # Put the processed file on the log
+                            import datetime   # Basic Date and Time types
+                            with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                                log.write(str(datetime.datetime.now()))
+                                log.write('\n')
+                                log.write(files[-1] + '\n')
+                                log.write('\n')
+                    else:
+                        print("This file was already downloaded.")
+                        print("")
 
-		else: # It is not a meso, so doesn't include mesoscale check
+        else: # It is not a meso, so doesn't include mesoscale check
 
-			for channel in CHANNEL:
-			
-				# Get output from rclone command, based on the desired data
-				print ("--------------------------------------------------------") 
-				print ("")
-				print("Command used:")
-				if osystem == "Windows": 
-					#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/")
-					files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/", shell=True)
-				else:
-					#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-					files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf', shell=True)
-				# Change type from 'bytes' to 'string'
-				files = files.decode()
-				# Split files based on the new line and remove the empty item at the end.
-				files = files.split('\n')
-				files.remove('')
-				
-				if (channel != 'False'):
-					# Get only the file names for an specific channel
-					files = [x for x in files if channel in x ]
-					OUTDIR = ingest_folder + globals()[product.replace("-", "_")+"_Folders"] + 'Band' + channel[-2:] + '//'
-					if not os.path.exists(OUTDIR):
-						os.makedirs(OUTDIR, exist_ok=True)
-							
-				# Get only the file names, without the file sizes
-				files = [i.split(" ")[-1] for i in files]
-				# Print the file names list
-				#print ("File list for this particular time, date and channel:")
-				#for i in files:
-				#    print(i)
-			
-				# If there aren't files available yet
-				if not files:
-					print("")
-					print("No files available yet... Exiting script")
-					print("")
-					break # No new files available in the cloud yet. Exiting the loop.
-			
-				print("")
-				print("File Name: ", files[-1])
-				print("")		
-				print("Checking if the file is on the daily log...")
-				# If the log file doesn't exist yet, create one
-				file = open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
-				file.close()
-				# Put all file names on the log in a list
-				log = []
-			
-				# Open the log to check the files already processed 
-				with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
-					log = f.readlines()
-					# Remove the line feeds
-					log = [x.strip() for x in log]
-				
-				# If a given file is not on the log
-				if files[-1] not in log:
-					print("")
-					print ("Checking if the file is from a desired minute...")
-				
-					# Search in the file name if the image from GOES is from a desired minute.
-					matches = 0 # Initialize matches
-					for minute in MINUTES: 
-						#print(minute)
-						#print(r'(?:s.........' + str(minute) + ')..._')
-						regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
-						finder = re.findall(regex, files[-1])
-						# If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
-						matches = len(finder)
-						#print(matches)
-						# If it is from a desired minute, exit verification loop
-						if (matches == 1): break
-						
-					if matches == 0: # If there are no matches
-						print("This is not an image from a desired minute... Exiting loop.")
-						# Put the processed file on the log
-						import datetime   # Basic Date and Time types
-						with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-							log.write(str(datetime.datetime.now()))
-							log.write('\n')
-							log.write(files[-1] + '\n')
-							log.write('\n')
-						break # This is not an image from minute 20 or 50. Exiting the loop.
-					else:
-						if (channel != 'False'):
-							print ("")
-							print ("Downloading the most recent file for channel: ", channel)
-						else:
-							print ("")
-							print ("Downloading the most recent file: ")
-						
-						# Download the most recent file for this particular hour
-						print(files[-1])
-						if osystem == "Windows": 
-							#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR)
-							os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir)
-							# When the download is finished, move the file to the final directory
-							import shutil
-							shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
-						else:
-							#print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-							os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
-							# When the download is finished, move the file to the final directory
-							import shutil
-							shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
-						print ("")
-						print ("Download finished!") 
-						print ("Putting the file name on the daily log...")
-						print("")
+            for channel in CHANNEL:
+            
+                # Get output from rclone command, based on the desired data
+                print ("--------------------------------------------------------") 
+                print ("")
+                print("Command used:")
+                if osystem == "Windows": 
+                    #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/")
+                    files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/", shell=True)
+                else:
+                    #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                    files = subprocess.check_output(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'ls publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf', shell=True)
+                # Change type from 'bytes' to 'string'
+                files = files.decode()
+                # Split files based on the new line and remove the empty item at the end.
+                files = files.split('\n')
+                files.remove('')
+                
+                if (channel != 'False'):
+                    # Get only the file names for an specific channel
+                    files = [x for x in files if channel in x ]
+                    OUTDIR = ingest_folder + globals()[product.replace("-", "_")+"_Folders"] + 'Band' + channel[-2:] + '//'
+                    if not os.path.exists(OUTDIR):
+                        os.makedirs(OUTDIR, exist_ok=True)
+                            
+                # Get only the file names, without the file sizes
+                files = [i.split(" ")[-1] for i in files]
+                # Print the file names list
+                #print ("File list for this particular time, date and channel:")
+                #for i in files:
+                #    print(i)
+            
+                # If there aren't files available yet
+                if not files:
+                    print("")
+                    print("No files available yet... Exiting script")
+                    print("")
+                    break # No new files available in the cloud yet. Exiting the loop.
+            
+                print("")
+                print("File Name: ", files[-1])
+                print("")        
+                print("Checking if the file is on the daily log...")
+                # If the log file doesn't exist yet, create one
+                file = open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
+                file.close()
+                # Put all file names on the log in a list
+                log = []
+            
+                # Open the log to check the files already processed 
+                with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
+                    log = f.readlines()
+                    # Remove the line feeds
+                    log = [x.strip() for x in log]
+                
+                # If a given file is not on the log
+                if files[-1] not in log:
+                    print("")
+                    print ("Checking if the file is from a desired minute...")
+                
+                    # Search in the file name if the image from GOES is from a desired minute.
+                    matches = 0 # Initialize matches
+                    for minute in MINUTES: 
+                        #print(minute)
+                        #print(r'(?:s.........' + str(minute) + ')..._')
+                        regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
+                        finder = re.findall(regex, files[-1])
+                        # If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
+                        matches = len(finder)
+                        #print(matches)
+                        # If it is from a desired minute, exit verification loop
+                        if (matches == 1): break
+                        
+                    if matches == 0: # If there are no matches
+                        print("This is not an image from a desired minute... Exiting loop.")
+                        # Put the processed file on the log
+                        import datetime   # Basic Date and Time types
+                        with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                            log.write(str(datetime.datetime.now()))
+                            log.write('\n')
+                            log.write(files[-1] + '\n')
+                            log.write('\n')
+                        break # This is not an image from minute 20 or 50. Exiting the loop.
+                    else:
+                        if (channel != 'False'):
+                            print ("")
+                            print ("Downloading the most recent file for channel: ", channel)
+                        else:
+                            print ("")
+                            print ("Downloading the most recent file: ")
+                        
+                        # Download the most recent file for this particular hour
+                        print(files[-1])
+                        if osystem == "Windows": 
+                            #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR)
+                            os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir)
+                            # When the download is finished, move the file to the final directory
+                            import shutil
+                            shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
+                        else:
+                            #print(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + OUTDIR  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                            os.system(main_dir + '//Cloud//Apps//' + 'rclone' + extension + " " + 'copy publicAWS:' + BUCKET + "/" + PRODUCT + "/" + YEAR + "/" + JULIAN_DAY + "/" + HOUR + "/" + files[-1] + " " + tmp_dir  + " --config " + main_dir + '//Cloud//Apps//' + 'rclone.conf')
+                            # When the download is finished, move the file to the final directory
+                            import shutil
+                            shutil.move(tmp_dir + files[-1], OUTDIR + files[-1])
+                        print ("")
+                        print ("Download finished!") 
+                        print ("Putting the file name on the daily log...")
+                        print("")
 
-						#---------------------------------------------------------------------------------------------
-						#---------------------------------------------------------------------------------------------
-			
-						# Put the processed file on the log
-						import datetime   # Basic Date and Time types
-						with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-							log.write(str(datetime.datetime.now()))
-							log.write('\n')
-							log.write(files[-1] + '\n')
-							log.write('\n')
-				else:
-					print("This file was already downloaded.")
-					print("")
+                        #---------------------------------------------------------------------------------------------
+                        #---------------------------------------------------------------------------------------------
+            
+                        # Put the processed file on the log
+                        import datetime   # Basic Date and Time types
+                        with open(main_dir + '//Cloud//Logs//' +'pda_aws_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                            log.write(str(datetime.datetime.now()))
+                            log.write('\n')
+                            log.write(files[-1] + '\n')
+                            log.write('\n')
+                else:
+                    print("This file was already downloaded.")
+                    print("")
 
 #------------------------------------------------------------------------------------------------------
 # SCRIPT END
