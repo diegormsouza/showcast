@@ -19,28 +19,28 @@ INSTRUCTIONS FOR USERS:
 
 3-) For each product on the product list, choose:
 
-	- First line: If the product should be downloaded (True) or not (False).
+    - First line: If the product should be downloaded (True) or not (False).
 
-	- Second line: AWS product name (don't change it!)
+    - Second line: AWS product name (don't change it!)
 
-	- Third line: Which channels should be downloaded for each selected "True" product. The products that 
-	  has 'False' on the channels list, are not channel based.
+    - Third line: Which channels should be downloaded for each selected "True" product. The products that 
+      has 'False' on the channels list, are not channel based.
 
-	- Third line (for MESOSCALE only): Which mesoscale sector(s) you wanto to download. 
+    - Third line (for MESOSCALE only): Which mesoscale sector(s) you wanto to download. 
 
-	- Fourth line: Which minutes (scans) should be downloaded for each selected "True" product. The default 
-	  options are the ones available for each product. For example the "SST" is an hourly product, so only 
-	  the option '00' is available for it.
+    - Fourth line: Which minutes (scans) should be downloaded for each selected "True" product. The default 
+      options are the ones available for each product. For example the "SST" is an hourly product, so only 
+      the option '00' is available for it.
 
-	- Fifth line: The folder you want to store your data. In the end, data will be stored on:
-	  ingest_folder + product folder + Band (if the product is channel based)
-	  Note: The default folder names are just suggestions. Change it to any name you want / need.
-	  Also, when downloading GOES-17 data, the folder name will be changed to "GOES-S" instead of "GOES-R"
+    - Fifth line: The folder you want to store your data. In the end, data will be stored on:
+      ingest_folder + product folder + Band (if the product is channel based)
+      Note: The default folder names are just suggestions. Change it to any name you want / need.
+      Also, when downloading GOES-17 data, the folder name will be changed to "GOES-S" instead of "GOES-R"
 
 IMPORTANT: This script was created for the SHOWCast utility, however it might be used as a standalone script
 By default, it assumes it is inside a folder called "Cloud" and inside this "Cloud" folder you must have a 
 "Logs" folder and an "Apps" folder, with the Rclone software in it. To download Rclone, please access:
-https://rclone.org/downloads/	
+https://rclone.org/downloads/    
 
 Note: If you want to use this script to download historical data, just manually change YEAR, JULIAN DAY and 
 HOUR, keeping UTC_DIFF as 0 (zero).
@@ -57,12 +57,12 @@ __status__ = "Production"
 #------------------------------------------------------------------------------------------------------
 # Required modules
 #------------------------------------------------------------------------------------------------------
-import os           					# Miscellaneous operating system interfaces
-import subprocess   					# The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
-import datetime     					# Basic date and time types
-import platform     					# Access to underlying platform’s identifying data
-import time as t    					# Time access and conversion
-import re           					# Regular expression operations
+import os                               # Miscellaneous operating system interfaces
+import subprocess                       # The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
+import datetime                         # Basic date and time types
+import platform                         # Access to underlying platform’s identifying data
+import time as t                        # Time access and conversion
+import re                               # Regular expression operations
 from os.path import dirname, abspath    # Return a normalized absolutized version of the pathname path 
 
 from siphon.catalog import TDSCatalog   # Code to support reading and parsing catalog files from a THREDDS Data Server (TDS)
@@ -161,123 +161,123 @@ base_cat_url = 'https://thredds-test.unidata.ucar.edu/thredds/catalog/satellite/
  
 for satellite in SATELLITES: # Loop through satellites 
 
-	if (satellite == 'goes16'):
-		platform = 'GRB16'
-	elif (satellite == 'goes17'):
-		platform = 'GRB17'
-	elif (satellite == 'goes18'):
-		platform = 'GRB18'
-	elif (satellite == 'goes19'):
-		platform = 'GRB19'
+    if (satellite == 'goes16'):
+        platform = 'GRB16'
+    elif (satellite == 'goes17'):
+        platform = 'GRB17'
+    elif (satellite == 'goes18'):
+        platform = 'GRB18'
+    elif (satellite == 'goes19'):
+        platform = 'GRB19'
         
-	for product in PRODUCTS: # Loop through products 
+    for product in PRODUCTS: # Loop through products 
 
-		DATASET = globals()[product + "_Dataset"]
-		SECTOR = globals()[product + "_Sector"]
-		CHANNEL = globals()[product + "_Channel"]
-		MINUTES = globals()[product + "_Minutes"]
-		OUTDIR  = ingest_folder + globals()[product + "_Folders"]
-		
-		#print(satellite)
-		#print(DATASET)
-		#print(SECTOR)
-		#print(CHANNEL)
-		#print(MINUTES)
-		#print(OUTDIR)
-			
-		for channel in CHANNEL:
-		
-			OUTDIR = ingest_folder + globals()[product + "_Folders"] + 'Band' + channel[-2:] + '//'
-			if not os.path.exists(OUTDIR):
-				os.makedirs(OUTDIR, exist_ok=True)
-			
-			# Get output from rclone command, based on the desired data
-			print ("--------------------------------------------------------") 
-			print ("")
-			print("Command used:")
-			
-			cat_url = base_cat_url.format(satellite = satellite, platform = platform, dataset = DATASET, sector = SECTOR, date = date, channel=channel)
-			print(cat_url)
-			
-			# Access the catalog
-			cat = TDSCatalog(cat_url)
-			# Get the latest dataset available
-			ds = cat.datasets[-1]
-						
-			print("")
-			print("File Name: ", ds)
-			print("")		
-			print("Checking if the file is on the daily log...")
-			# If the log file doesn't exist yet, create one
-			file = open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
-			file.close()
-			# Put all file names on the log in a list
-			log = []
-			
-			# Open the log to check the files already processed 
-			with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
-				log = f.readlines()
-				# Remove the line feeds
-				log = [x.strip() for x in log]
-			
-			# If a given file is not on the log
-			if ds not in log:
-				print("")
-				print ("Checking if the file is from a desired minute...")
-			
-				# Search in the file name if the image from GOES is from a desired minute.
-				matches = 0 # Initialize matches
-				for minute in MINUTES: 
-					#print(minute)
-					#print(r'(?:s.........' + str(minute) + ')..._')
-					regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
-					finder = re.findall(regex, str(ds))
-					# If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
-					matches = len(finder)
-					#print(matches)
-					# If it is from a desired minute, exit verification loop
-					if (matches == 1): break
-					
-				if matches == 0: # If there are no matches
-					print("This is not an image from a desired minute... Exiting loop.")
-					# Put the processed file on the log
-					import datetime   # Basic Date and Time types
-					with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-						log.write(str(datetime.datetime.now()))
-						log.write('\n')
-						log.write(ds + '\n')
-						log.write('\n')
-					break # This is not an image from minute 20 or 50. Exiting the loop.
-				else:
-					print ("")
-					print ("Downloading the most recent file for channel: ", channel)
-					
-					# Get the URL
-					url = ds.access_urls['HTTPServer']
-					# Download the most recent file for this particular hour
-					urllib.request.urlretrieve(url, tmp_dir + str(ds))					
-					# When the download is finished, move the file to the final directory
-					import shutil
-					shutil.move(tmp_dir + str(ds), OUTDIR + str(ds))
-					print ("")
-					print ("Download finished!") 
-					print ("Putting the file name on the daily log...")
-					print("")
+        DATASET = globals()[product + "_Dataset"]
+        SECTOR = globals()[product + "_Sector"]
+        CHANNEL = globals()[product + "_Channel"]
+        MINUTES = globals()[product + "_Minutes"]
+        OUTDIR  = ingest_folder + globals()[product + "_Folders"]
+        
+        #print(satellite)
+        #print(DATASET)
+        #print(SECTOR)
+        #print(CHANNEL)
+        #print(MINUTES)
+        #print(OUTDIR)
+            
+        for channel in CHANNEL:
+        
+            OUTDIR = ingest_folder + globals()[product + "_Folders"] + 'Band' + channel[-2:] + '//'
+            if not os.path.exists(OUTDIR):
+                os.makedirs(OUTDIR, exist_ok=True)
+            
+            # Get output from rclone command, based on the desired data
+            print ("--------------------------------------------------------") 
+            print ("")
+            print("Command used:")
+            
+            cat_url = base_cat_url.format(satellite = satellite, platform = platform, dataset = DATASET, sector = SECTOR, date = date, channel=channel)
+            print(cat_url)
+            
+            # Access the catalog
+            cat = TDSCatalog(cat_url)
+            # Get the latest dataset available
+            ds = cat.datasets[-1]
+                        
+            print("")
+            print("File Name: ", ds)
+            print("")        
+            print("Checking if the file is on the daily log...")
+            # If the log file doesn't exist yet, create one
+            file = open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a')
+            file.close()
+            # Put all file names on the log in a list
+            log = []
+            
+            # Open the log to check the files already processed 
+            with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt') as f:
+                log = f.readlines()
+                # Remove the line feeds
+                log = [x.strip() for x in log]
+            
+            # If a given file is not on the log
+            if ds not in log:
+                print("")
+                print ("Checking if the file is from a desired minute...")
+            
+                # Search in the file name if the image from GOES is from a desired minute.
+                matches = 0 # Initialize matches
+                for minute in MINUTES: 
+                    #print(minute)
+                    #print(r'(?:s.........' + str(minute) + ')..._')
+                    regex = re.compile(r'(?:s.........' + str(minute) + ')..._')
+                    finder = re.findall(regex, str(ds))
+                    # If "matches" is "0", it is not from a desired minute. If it is "1", we may download the file
+                    matches = len(finder)
+                    #print(matches)
+                    # If it is from a desired minute, exit verification loop
+                    if (matches == 1): break
+                    
+                if matches == 0: # If there are no matches
+                    print("This is not an image from a desired minute... Exiting loop.")
+                    # Put the processed file on the log
+                    import datetime   # Basic Date and Time types
+                    with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                        log.write(str(datetime.datetime.now()))
+                        log.write('\n')
+                        log.write(ds + '\n')
+                        log.write('\n')
+                    break # This is not an image from minute 20 or 50. Exiting the loop.
+                else:
+                    print ("")
+                    print ("Downloading the most recent file for channel: ", channel)
+                    
+                    # Get the URL
+                    url = ds.access_urls['HTTPServer']
+                    # Download the most recent file for this particular hour
+                    urllib.request.urlretrieve(url, tmp_dir + str(ds))                    
+                    # When the download is finished, move the file to the final directory
+                    import shutil
+                    shutil.move(tmp_dir + str(ds), OUTDIR + str(ds))
+                    print ("")
+                    print ("Download finished!") 
+                    print ("Putting the file name on the daily log...")
+                    print("")
 
-					#---------------------------------------------------------------------------------------------
-					#---------------------------------------------------------------------------------------------
-		
-					# Put the processed file on the log
-					import datetime   # Basic Date and Time types
-					with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
-						log.write(str(datetime.datetime.now()))
-						log.write('\n')
-						log.write(str(ds) + '\n')
-						log.write('\n')
-			
-			else:
-				print("This file was already downloaded.")
-				print("")			
+                    #---------------------------------------------------------------------------------------------
+                    #---------------------------------------------------------------------------------------------
+        
+                    # Put the processed file on the log
+                    import datetime   # Basic Date and Time types
+                    with open(main_dir + '//Cloud//Logs//' + 'grb_unidata_log_' + str(datetime.datetime.now())[0:10] + '.txt', 'a') as log:
+                        log.write(str(datetime.datetime.now()))
+                        log.write('\n')
+                        log.write(str(ds) + '\n')
+                        log.write('\n')
+            
+            else:
+                print("This file was already downloaded.")
+                print("")            
 
 #------------------------------------------------------------------------------------------------------
 # SCRIPT END
