@@ -46,7 +46,7 @@ def getGeoT(extent, nlines, ncols):
 def getScaleOffset(path, variable):
     nc = Dataset(path, mode='r')
     
-    if (variable == "BCM") or (variable == "Phase") or (variable == "Smoke") or (variable == "Dust") or (variable == "Mask") or (variable == "Power"): 
+    if (variable == "BCM") or (variable == "Phase") or (variable == "Smoke") or (variable == "Dust") or (variable == "Mask") or (variable == "Power") or (variable == "FSC"): 
         scale  = 1
         offset = 0     
     else:

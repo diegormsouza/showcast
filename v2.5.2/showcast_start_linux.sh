@@ -2,6 +2,10 @@
 # Select the number of SHOWCast parallel processes
 declare -i num_process=1
 
+# Configure geospatial library paths for GDAL/Cartopy
+export PROJ_LIB="$(pwd)/Miniconda3/envs/showcast/share/proj"
+export GDAL_DATA="$(pwd)/Miniconda3/envs/showcast/share/gdal"
+
 echo --------------
 echo "SHOWCast Start"
 echo --------------

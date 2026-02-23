@@ -413,7 +413,7 @@ gl.ylabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'wei
 gl.xlabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
 
 # Remove the outline border
-ax.outline_patch.set_visible(False)
+ax.spines['geo'].set_visible(False)
   
 # Add a title
 plt.annotate(plot_config["title_text"] + " " + date_formated , xy=(plot_config["title_x_offset"], plot_config["title_y_offset"]), xycoords='figure pixels', fontsize=plot_config["title_size"], fontweight='bold', color='white', bbox=dict(boxstyle="round",fc=(0.0, 0.0, 0.0), ec=(1., 1., 1.)), zorder=6)

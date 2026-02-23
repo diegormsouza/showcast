@@ -1,0 +1,183 @@
+# ==================================
+# SHOWCast .gitignore
+# ==================================
+
+# ========== DATA & DOWNLOADS ==========
+# Downloaded satellite data (very large!)
+v2.5.2/Cloud/Downloads/
+**/Downloads/
+
+# Output images and processed data
+v2.5.2/Output/
+**/Output/
+
+# ========== LOGS ==========
+# All log files
+v2.5.2/Cloud/Logs/*.txt
+v2.5.2/Cloud/Logs/*.log
+v2.5.2/Logs/*.txt
+v2.5.2/Logs/*.log
+**/Logs/*.txt
+**/Logs/*.log
+
+# ========== TEMPORARY FILES ==========
+# Temporary download directory
+v2.5.2/Cloud/Scripts/tmp/
+**/tmp/
+**/temp/
+*.tmp
+
+# ========== PYTHON ==========
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ========== CONDA/MINICONDA ==========
+# Conda environment (very large!)
+v2.5.2/Miniconda3/
+**/Miniconda3/
+**/miniconda3/
+**/anaconda3/
+
+# ========== IDE & EDITORS ==========
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ========== OS SPECIFIC ==========
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# ========== SCIENTIFIC DATA FILES ==========
+# NetCDF files (can be large)
+*.nc
+*.nc4
+
+# GRIB files
+*.grb
+*.grb2
+*.grib
+*.grib2
+
+# HDF files
+*.hdf
+*.h5
+*.hdf5
+
+# ========== IMAGE FILES (Optional - comment out if you want to track them) ==========
+# Uncomment if you don't want to track generated images
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.bmp
+# *.tiff
+
+# ========== ARCHIVES & COMPRESSED ==========
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ========== CONFIG FILES (be careful!) ==========
+# Uncomment specific configs you don't want to track
+# config_local.py
+# *_local.py
+# secrets.py
+
+# ========== CUSTOM IGNORES ==========
+# Add project-specific ignores below
+

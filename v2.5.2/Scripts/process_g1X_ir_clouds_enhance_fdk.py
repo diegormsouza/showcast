@@ -216,7 +216,7 @@ ax.add_geometries(shapefile, ccrs.PlateCarree(), edgecolor=plot_config["continen
 ax.gridlines(color=plot_config["grid_color"], alpha=0.5, linestyle='--', linewidth=plot_config["grid_width"], xlocs=np.arange(-180, 180, plot_config["grid_interval"]), ylocs=np.arange(-180, 180, plot_config["grid_interval"]), draw_labels=False, zorder=9)
 
 # Remove the outline border
-ax.outline_patch.set_visible(False)
+ax.spines['geo'].set_visible(False)
 
 #------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------

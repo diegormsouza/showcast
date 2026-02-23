@@ -291,7 +291,7 @@ gl.ylabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'wei
 gl.xlabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
 
 # Remove the outline border
-ax.outline_patch.set_visible(False)
+ax.spines['geo'].set_visible(False)
   
 #---------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------

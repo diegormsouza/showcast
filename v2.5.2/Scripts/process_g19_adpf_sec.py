@@ -263,7 +263,7 @@ ax.set_extent([extent[0], extent[2], extent[1], extent[3]], ccrs.PlateCarree())
 # Define the image extent
 img_extent = [extent[0], extent[2], extent[1], extent[3]]
 
-ax.background_patch.set_fill(False)
+ax.patch.set_fill(False)
 # Add a background image
 #ax.stock_img()
 #fname = os.path.join(main_dir + '//Maps//', 'land_ocean_ice_8192.jpg')
@@ -297,7 +297,7 @@ gl.ylabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'wei
 gl.xlabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
 
 # Remove the outline border
-ax.outline_patch.set_visible(False)
+ax.spines['geo'].set_visible(False)
   
 # Add a title
 plt.annotate(plot_config["title_text"] + " " + date_formated , xy=(plot_config["title_x_offset"], plot_config["title_y_offset"]), xycoords='figure pixels', fontsize=plot_config["title_size"], fontweight='bold', color='white', bbox=dict(boxstyle="round",fc=(0.0, 0.0, 0.0), ec=(1., 1., 1.)), zorder=8)

@@ -89,7 +89,7 @@ def update(satellite, product, nfiles, outdir, vis_dir):
     diff_files = max_files - num_files
     
     # If there are less files than the maximum HTML animation files, repeat the last one "x" times
-    if diff_files > 0:
+    if diff_files > 0 and num_files > 0:
         for i in range(diff_files):
             dst = out_dir + rename_id + str(num_files + i + 1) + '.webp'       
             copyfile(files[-1], dst)
@@ -102,11 +102,12 @@ def update(satellite, product, nfiles, outdir, vis_dir):
         
     # Create the thumbnail of the last file
     thumb_dir = vis_dir + 'QuickLooks//' + rename_id + 'quicklook.webp'
-    copyfile(files[-1], dst)
-    im = Image.open(files[-1])
-    size = (1024,1024)
-    im = im.resize(size)
-    im.save(thumb_dir)
+    if num_files > 0:
+        copyfile(files[-1], thumb_dir)
+        im = Image.open(files[-1])
+        size = (1024,1024)
+        im = im.resize(size)
+        im.save(thumb_dir)
     
     #print('Total processing time:', round((t.time() - start),2), 'seconds.') 
 

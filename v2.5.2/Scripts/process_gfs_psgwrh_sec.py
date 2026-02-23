@@ -427,7 +427,7 @@ for hour in range(hour_ini, hour_end, hour_inc):
         gl.xlabel_style = {'color': 'white', 'size': plot_config["cbar_labelsize"], 'weight': 'bold'}
 
         # Remove the outline border
-        ax.outline_patch.set_visible(False)
+        ax.spines['geo'].set_visible(False)
           
         # Add a title
         #plt.title("GFS (0.5°): PSML + Geop. Dif. (1000-850 hPa) + Winds (925 hPa) + Mean RH (1000~400 hPa)", fontweight='bold', fontsize=7, loc='left')
